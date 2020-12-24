@@ -9,24 +9,24 @@ def Admin_Login(request):
         uname = request.POST["uname"]
         password = request.POST["password"]
         if uname == admin or password == admin:
-            return render(request,"Farmer Data.html")
+            return render(request,"Admin/Farmer Data.html")
         else:
             messages.info(request,"uname and password is admin")
             return redirect('alogin')
     else:
-        return render(request,"Admin Login.html")
+        return render(request,"Admin/Admin Login.html")
 
 def Farmer_Data(request):
     res = Customer.objects.all()
-    return render(request,"Farmer Data.html",{"data":res})
+    return render(request,"Admin/Farmer Data.html",{"data":res})
 
 def Dealer_Data(request):
     sell = Seller.objects.all()
-    return render(request,"Dealer Data.html",{"s":sell})
+    return render(request,"Admin/Dealer Data.html",{"s":sell})
 
 def Govt_Data(request):
     data = Govt.objects.all()
-    return render(request,"Govt DB.html",{"i":data})
+    return render(request,"Admin/Govt DB.html",{"i":data})
 
 def Govt_Add_Farmer(request):
     if request.method == "POST":
@@ -54,12 +54,12 @@ def Govt_Add_Farmer(request):
             New_Farmer.save()
             return redirect("gdata")      
     else:
-        return render(request,"Govt_Add_Farmer.html")
+        return render(request,"Admin/Govt_Add_Farmer.html")
 
 def Govt_Up_Farmer(request):
     uid = request.GET["id"]
     res = Govt.objects.filter(id=uid)
-    return render(request,"Govt_Update_Farmer.html",{"r":res})
+    return render(request,"Admin/Govt_Update_Farmer.html",{"r":res})
 
 def Govt_Update_Farmer(request):
     Id = request.POST["Uid"]
@@ -89,7 +89,7 @@ def Govt_Delete_Farmer(request):
 def Admin_Up_Seller(request):
     id = request.POST["id"]
     res = Seller.objects.filter(id=id)
-    return render(request,"Admin_Update_Seller.html",{"r":res})
+    return render(request,"Admin/Admin_Update_Seller.html",{"r":res})
 
 def Admin_Update_Seller(request):
     Uid = request.POST['id']

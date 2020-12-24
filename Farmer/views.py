@@ -20,14 +20,14 @@ def Single(request):
         Name = request.POST["Name"]
         res = Product.objects.filter(Name=Name)
         if res:
-            return render(request,"single.html",{"Data":res})
+            return render(request,"Farmer/single.html",{"Data":res})
         else:
             messages.info(request,"Product Not Found")
             return redirect("single")
     else:
         Sid = request.GET.get("id")
         res = Product.objects.filter(id=Sid)
-        return render(request,"single.html",{"Data":res})
+        return render(request,"Farmer/single.html",{"Data":res})
 
 def Registration(request):
     if request.method == 'POST':
@@ -141,7 +141,7 @@ def Track(request):
     return render(request,"Track.html")
 
 def Farmer_Home(request):
-    return render(request,"Farmer Home.html")
+    return render(request,"Farmer/Farmer Home.html")
 
 
 
@@ -150,7 +150,7 @@ def Farmer_Product(request):
     count = 0
     for item in Cart.objects.all():
         count += 1
-    return render(request,"Farmer Product.html",{"pro":new,"c":count})
+    return render(request,"Farmer/Farmer Product.html",{"pro":new,"c":count})
 
 def AddCart(request):
     if request.method == "POST":
@@ -175,7 +175,7 @@ def AddCart(request):
             count = 0
             for item in Cart.objects.all():
                 count += 1
-            return render(request,"Farmer Product.html",{"pro":Add,"c":count})
+            return render(request,"Farmer/Farmer Product.html",{"pro":Add,"c":count})
     else:
         count = 0
         for item in Cart.objects.all():
@@ -190,12 +190,11 @@ def Farmer_Cart(request):
         Total += item.Sub_Total
         count += 1
     New = Cart.objects.all()
-    return render(request,"Farmer Cart.html",{"car":New,'t':Total,"c":count})
+    return render(request,"Farmer/Farmer Cart.html",{"car":New,'t':Total,"c":count})
 
 def DeleteCart(request):
     Cid = request.GET.get("Id")
     Cart.objects.filter(Index_Id=Cid).delete()
-    Order.objects.all().delete()
     return redirect("fcart")
 
 def CheckOut(request):
@@ -203,7 +202,7 @@ def CheckOut(request):
     if request.method == "POST":
         Total = request.POST["Total"]
     res = Cart.objects.all()
-    return render(request,"Checkout.html",{"car":res,"t":Total})
+    return render(request,"Farmer/Checkout.html",{"car":res,"t":Total})
     
 
 def Farmer_Orders(request):
@@ -240,33 +239,33 @@ def Farmer_Orders(request):
         Order(Name=Name,Price=Price,Image=Image,Quantity=Quantity,Order_Id=Order_Id,Order_Date=d,Payment_Mode=Payment,Delivery_Date=Delivery_Date).save()
         Cart.objects.all().delete()
         res = Order.objects.all()
-        return render(request,"Farmer Orders.html",{"ord":res})
+        return render(request,"Farmer/Farmer Orders.html",{"ord":res})
     else:
         res = Order.objects.all()
-        return render(request,"Farmer Orders.html",{"ord":res})
+        return render(request,"Farmer/Farmer Orders.html",{"ord":res})
 
 def Order_Details(request):
     if request.method == 'POST':
         id = request.POST.get("OID")
         res = Order.objects.filter(Order_Id=id)
         if res:
-            return render(request,"Order Details.html",{"Data":res})
+            return render(request,"Farmer/Order Details.html",{"Data":res})
         else:
             messages.info(request,'Order Details Not Found')
             return redirect("ftrack")
     else:
         Did = request.GET.get("id")
         res = Order.objects.filter(id=Did)
-        return render(request,"Order Details.html",{"Data":res})
+        return render(request,"Farmer/Order Details.html",{"Data":res})
 
 def Farmer_Notifications(request):
-    return render(request,"Farmer Notifications.html")
+    return render(request,"Farmer/Farmer Notifications.html")
 
 def Farmer_Track(request):
-    return render(request,"Farmer Track.html")
+    return render(request,"Farmer/Farmer Track.html")
 
 def Farmer_Info(request):
-    return render(request,"Farmer Info.html")
+    return render(request,"Farmer/Farmer Info.html")
 
 def Tracking(request):
     if request.method == 'POST':
@@ -275,7 +274,7 @@ def Tracking(request):
         return render(request,"Tracking.html",{"Data":res})
 
 def FAddress(request):
-    return render(request,"Farmer Address.html")
+    return render(request,"Farmer/Farmer Address.html")
 
 def AddAddress(request):
-    return render(request,"Add Address.html")
+    return render(request,"Farmer/Add Address.html")

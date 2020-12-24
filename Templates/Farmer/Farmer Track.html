@@ -1,0 +1,35 @@
+{% extends 'Farmer_Base.html' %}
+{% block Farmer %}
+<title>Order Track</title>
+<style>
+    /*  Farmer Track Page CSS Started Here */
+
+.Farmer_Track1{float: left;width: 100%;height: 500px;margin-top: 5px;text-align: center;background-color: rgba(95, 158, 160, 0.349);}
+.Farmer_Track2{float: left;width: 35%;height: 275px;background-color: whitesmoke; transform: translate(-50,-50);left: 32%;top: 40%; position: absolute;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Farmer_Track3{float: left;width: 100%;height: 50px;margin-top: 10px;}
+.Farmer_Track3 label{font-weight: bolder;font-size: larger;}
+.Farmer_Track3 input{height: 35px;width: 45%;border-radius: 5px;outline: none;cursor: pointer;font-size: large;}
+.Farmer_Track2 button{width: 30%;height: 40px;margin-top: 30px;font-size: larger; border-radius: 15px;outline: none;border: black 2px solid;cursor: pointer;}
+
+/*  Farmer Track Page CSS Ended Here */ 
+</style>
+{% load static %}
+<form action="details" method="POST">
+    {% csrf_token %}
+    <div class="Farmer_Track1" >
+        <div class="Farmer_Track2">
+            <u><b><h1>Track Your Order</h1></b></u>
+            <div class="Farmer_Track3">
+                <label>Order ID : </label>
+                <input type="text" placeholder="Enter Order Id" required name="OID">
+            </div>
+            <button type="submit"><b>Get Details</b></button>
+        </div>
+        <div>
+            {% for mes in messages %}
+                <h3>{{mes}}</h3>
+            {% endfor %}
+        </div>
+    </div>
+</form>
+{% endblock %}

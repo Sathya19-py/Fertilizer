@@ -53,7 +53,7 @@ def SellLogin(request):
     return render(request,"Seller Login.html")
 
 def Home(request):
-    return render(request,"Dealer Home.html")
+    return render(request,"Dealer/Dealer Home.html")
 
 def Add_Product(request):
     if request.method == 'POST':
@@ -69,17 +69,17 @@ def Add_Product(request):
         messages.info(request,"Product Added Successfully")
         return redirect('add')
     else:
-        return render(request,"Add Product.html")
+        return render(request,"Dealer/Add Product.html")
 
 def Delete_Update(request):
     res = Product.objects.all()
-    return render(request,"Delete and Update Product.html",{"pro":res})
+    return render(request,"Dealer/Delete and Update Product.html",{"pro":res})
 
 
 def Update(request):
     uid = request.POST.get("id")
     res = Product.objects.get(id=uid)
-    return render(request,"Update Product.html",{"data":res})
+    return render(request,"Dealer/Update Product.html",{"data":res})
 
 def Update_Product(request):
     id = request.POST["id"]
@@ -98,7 +98,7 @@ def Delete(request):
 
 def Orders(request):
     res = Order.objects.all()
-    return render(request,"Order Received.html",{"Data":res})
+    return render(request,"Dealer/Order Received.html",{"Data":res})
 
 def Delivery_Status(request):
-    return render(request,"Delivery Status.html")
+    return render(request,"Dealer/Delivery Status.html")

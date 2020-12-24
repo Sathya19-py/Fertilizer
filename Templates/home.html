@@ -1,6 +1,89 @@
 {% extends 'Home_Base.html' %}
 {% block Home %}
 <title>E-Fertilizer's</title>
+<style>
+
+/* Home Page CSS Started */
+
+.sea{float: left;width: 100%;height: 350px;margin-top: 5px;}
+.sea img{float: left;width: 100%;height: 350px;}
+
+/* slider css Started */
+
+.slider1{
+    margin-top: 5px;
+    width: 100%;
+    height: 400px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    background: white;
+    
+    }
+
+@keyframes sliding{
+    0%{left: 0%;}
+    25%{left: -100%;}
+    50%{left: -200%;}
+    75%{left: -300%;}
+    100%{left: -400%;}
+    100%{left: 0%;}
+    }       
+    
+.slider{overflow: hidden;}
+.slide img{width: 20%;height: 500px;float: left;}
+.slide{
+    overflow: hidden;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    animation: 20s sliding ease infinite;       
+}
+
+.d6{float: left;width: 100%;height: 300px;margin-top: 1px;}
+.d6 img{float: left;width: 45%;height: 275px;padding: 10;}
+.d7{float: left;width: 45%;height: 275px;padding: 20px;text-align: center;}
+.d7 b{font-size: xx-large;}
+.d7 p{font-size: large;text-align: justify;}
+
+/*   slider CSS Ended  */
+/*-----------------------------------------------------------------------------------------------*/
+/* Home Page  Products CSS Started Here */
+
+.Product1{float: left;width: 100%;height: 950px;margin-top: 5px;background-color: rgba(95, 158, 160, 0.205);}
+.Product2{float: left;width: 100%;height: 400px;margin-top: 5px;}
+.Product7{float: left;width: 100%;height: 400px;margin-top: 50px;}
+.Product3{float: left; width: 26%;height: 400px; background-color: whitesmoke;margin-left: 80px;border-radius: 5px;box-sizing: content-box;text-align: center;}
+.Product4{float: left;width: 100%;height: 150px;}
+.Product3 img{width: 40%;height: 100px;margin-top: 20px;border-radius: 10px;}
+.Product3 button{width: 50%;height: 35px;margin-top: 10px;background-color: rgba(95, 158, 160, 0.658);outline: none;border-radius: 10px;font-family: sans-serif;font-weight: bold;}
+.Product5{padding-left: 40px;padding-right: 40px;text-align: justify;}
+.Product6{float: left;width: 100%;height: 45px;}
+.Product6 a{float: right;margin-right: 50px;text-decoration: none;font-weight: bold;font-family: sans-serif;}
+.Product6 b{float: left; font-family: sans-serif;width: 25%;font-size: large;color: rgb(19, 19, 82);margin-left: 30px;}
+.Product3:hover{box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);border-radius: 15px;}
+
+/* Home Page Products CSS Ended Here */
+
+/* Home Page CSS Ended */
+/*-----------------------------------------------------------------------------------------------*/
+/* Footer CSS Started */
+
+footer{float: left;width: 100%;height: 320px;background-color: rgb(29, 255, 9);border-radius: 5px;margin-top: 5px;}
+.f1{float: left;width: 25%;color: whitesmoke;margin-left: 90px;margin-top: 50px;}
+.f1 b{font-size: larger; color: black;font-family: cursive;}
+.f2{font-style: italic; text-align: justify;margin-top: 30px;color: black;}
+.f4{float: left;width: 100%;height: 30px;}
+.f5{float: left;width: 100%;height: 200px;margin-top: 25px;}
+.f5 div{float: left;width: 50%;}
+.f5 a{float: left;width: 100%;text-decoration: none;color: white;font-size: large;margin-top: 5px;color: black;font-style: italic;}
+.f1 img{width: 7%;height: 20px;}
+.f1 p{color: black;font-style: oblique;}
+
+/* Footer CSS Ended */
+
+</style>
 {% load static %}
 <div class="sea">
     <img src="{% static 'Images/Pics/farm1.jpg' %}">
