@@ -1,0 +1,87 @@
+{% extends 'Admin_Base.html' %}
+{% block Admin %}
+<title>Adding Farmer Details</title>
+{% load static %}
+<style>
+    .Admin_Add_Farmer{float: left;width: 100%;height: 600px; margin-top: 5px;border-radius: 10px;background-image: url(color.jpg);background-size: cover;background-color: gray;}
+    .Admin_Add_Farmer1{position: absolute;top: 62%;left: 50%;background-color: whitesmoke; transform: translate(-50%,-50%);width: 75%;height: 500px;float: left;border-radius: 10px;}
+    .Admin_Add_Farmer2{float: left;width: 100%;height: 60px;font-size: xx-large;border-radius: 10px;border-bottom: orangered 5px solid;}
+    .Admin_Add_Farmer2 b{float: left; margin-top:10px;width: 100%;height: 40px;color: orangered; text-align: center;}
+    .Admin_Add_Farmer3{float: left;width: 100%;height: 50px;margin-top: 20px;}
+    .Admin_Add_Farmer3 div{float: left;width: 45%;height: 50px;margin-left: 50px;}
+    .Admin_Add_Farmer3 div label{float: left;width: 30%;height: 50px;font-size: larger;}
+    .Admin_Add_Farmer3 div input{width: 50%;height: 35px;outline: none;border-radius: 5px;}
+    .Admin_Add_Farmer4{float: left;width: 100%;height: 50px;text-align: center;margin-top: 10px;}
+    .Admin_Add_Farmer4 button{text-align: center;width: 12%;height: 40px;border-radius: 20px;background-color: antiquewhite;font-weight: bold;outline: none;font-size: larger;}
+    .Admin_Add_Farmer5{border-bottom-left-radius: 15px;border-top-left-radius: 15px;margin-left: 50px;margin-top: 30px;width: 100px;height: 30px;font-weight: bold;outline: none;font-size: larger;color: orangered;}
+</style>
+<div class="Admin_Add_Farmer">
+    {% for item in messages %}
+        <h3>{{ item }}</h3>
+    {% endfor %}
+    <a href="gdata">
+        <button class="Admin_Add_Farmer5" >back</button>
+    </a>    
+    <form action="govtaddfarmer" method="POST">
+        {% csrf_token %}
+        <div class="Admin_Add_Farmer1">
+            <div class="Admin_Add_Farmer2">
+               <b>Adding Farmer Details</b> 
+            </div>
+            <div class="Admin_Add_Farmer3" >
+                <div>
+                    <label>First Name  :  </label>
+                    <input type="text" name="fname" placeholder="Enter First Name" required>
+                </div>
+                <div>
+                    <label>Last Name  :  </label>
+                    <input type="text" name="lname" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <div class="Admin_Add_Farmer3" >
+                <div>
+                    <label>House No  :  </label>
+                    <input type="text" name="houseno" placeholder="Enter House No">
+                </div>
+                <div>
+                    <label>Village  :  </label>
+                    <input type="text" name="village" placeholder="Enter Village">
+                </div>
+            </div>
+            <div class="Admin_Add_Farmer3" >
+                <div>
+                    <label>Mandal  :  </label>
+                    <input type="text" name="mandal" placeholder="Enter Mandal">
+                </div>
+                <div>
+                    <label>District  :  </label>
+                    <input type="text" name="district" placeholder="Enter District">
+                </div>
+            </div>
+            <div class="Admin_Add_Farmer3" >
+                <div>
+                    <label>State  :  </label>
+                    <input type="text" name="state" placeholder="Enter State">
+                </div>
+                <div>
+                    <label>Aadhaar Number  :  </label>
+                    <input type="number" name="aadhaar" min-digits="12" max-digits="12" placeholder="Enter Aadhaar Number" required>
+                </div>
+            </div>
+            <div class="Admin_Add_Farmer3" >
+                <div>
+                    <label>P-B Number :  </label> 
+                    <input type="text" name="passbook" placeholder="Enter PB Number" required >
+                </div>
+                <div>
+                    <label>Land  :  </label>
+                    <input type="text" name="land" placeholder="Land In Acers" required>
+                </div>
+            </div>
+            <div class="Admin_Add_Farmer4">
+                <button type="submit">ADD</button>
+            </div>   
+        </div>
+    </form>
+</div>
+{% endblock %}

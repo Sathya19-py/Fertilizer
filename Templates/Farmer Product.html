@@ -1,0 +1,34 @@
+{% extends 'Farmer_Base.html' %}
+{% block Farmer %}
+<title>Products</title>
+{% load static %}
+{% for p in pro %}
+<div class="Farmer_Product3">
+    <div class="Farmer_Product4">
+        <a href="single?id={{p.id}}">
+            <img src="{{p.Image.url}}">
+        </a>
+    </div>
+    <p><b>Product Name:</b>{{p.Name}}</p>
+    <p><b>Price:</b>&#8377 {{p.Price}}/{{p.Weight}}{{p.Weight1}} </p>
+    <p class="Farmer_Product5"> 
+        {{p.Description}}
+    </p>
+    <form action="addcart" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p><b>Quantity : </b><input style="width: 45px;text-align:center"  type="number" name="Quantity" value=1></p>
+        <input type="hidden" name="id" value="{{p.id}}">
+        <input type="hidden" name="Name" value="{{p.Name}}">
+        <input type="hidden" name="Price" value="{{p.Price}}">
+        <input type="hidden" name="Weight" value="{{p.Weight}}">
+        <input type="hidden" name="Weight1" value="{{p.Weight1}}">
+        <input type="hidden" type="file" name="Image" value="{{p.Image}}">
+    <button type="submit">Add To Cart</button>
+    </form>
+    <button type="button">Buy Now</button>
+</div>
+{% endfor %}
+{% for mess in messages %}
+    <h3>{{mess}}</h3>
+{% endfor %}
+{% endblock %}

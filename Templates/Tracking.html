@@ -1,0 +1,9 @@
+<div>
+    {% for i in Data %}
+      <img width="200" height="200" src="{{i.Image.url}}">
+      Order Id : {{i.Order_Id}}
+      Name : {{i.Name}}
+      Quantity : {{i.Quantity}}
+      Total : {{i.Price}}
+    {% endfor %}
+</div>

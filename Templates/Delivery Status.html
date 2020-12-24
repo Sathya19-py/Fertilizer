@@ -1,0 +1,51 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Delivery Status</title>
+{% load static %}
+<div class="Delivery_Status1">
+    <div class="Delivery_Status2">
+        <table>
+            <tr>
+                <th colspan="6">
+                    <u>Delivery Status</u>
+                </th>
+            </tr>
+            <tr>
+                <th>Order_Id</th>
+                <th>Ordered_Date</th>
+                <th>Expected Delivery Date</th>
+                <th>Delivery_Date</th>
+                <th>Delivery_Status</th>
+            </tr>
+            <tr>
+                <td>OD152154781</td>
+                <td>25-10-2018</td>
+                <td>---</td>
+                <td>25-10-2018</td>
+                <td>Order Delivered</td>
+            </tr>
+            <tr>
+                <td>OD152154547</td>
+                <td>10-12-2018</td>
+                <td>---</td>
+                <td>15-12-2018</td>
+                <td>Order Delivered</td>
+            </tr>
+            <tr>
+                <td>OD152154812</td>
+                <td>15-01-2019</td>
+                <td>20-01-2019</td>
+                <td>---</td>
+                <td>Shipping</td>
+            </tr>
+            <tr>
+                <td>OD152154654</td>
+                <td>20-01-2019</td>
+                <td>25-10-2018</td>
+                <td>---</td>
+                <td>Shipping</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

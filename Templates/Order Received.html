@@ -1,0 +1,36 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Received Orders</title>
+{% load static %}
+<div class="Order_Received1">
+    <div class="Order_Received2">
+        <table>
+            <tr>
+                <th colspan="7">
+                    <u>Order info</u>
+                </th>
+            </tr>
+            <tr>
+                <th>Product_Id</th>
+                <th>Order_Id</th>
+                <th>Product_Name</th>
+                <th>Product_Quantity</th>
+                <th>Payment_Mode</th>
+                <th>Total_Amount</th>
+                <th>Cancel_Order</th>
+            </tr>
+            {% for i in Data %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.Order_Id}}</td>
+                    <td>{{i.Name}}</td>
+                    <td>{{i.Quantity}}</td>
+                    <td>{{i.Payment_Mode}}</td>
+                    <td>&#8377 {{i.Price}}</td>
+                    <td><button>Cancel</button></td>
+                </tr>  
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

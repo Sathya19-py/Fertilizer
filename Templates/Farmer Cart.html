@@ -1,0 +1,49 @@
+{% extends 'Farmer_Base.html' %}
+{% block Farmer %}
+<title>cart</title>
+{% load static %}
+<div class="Cart1">
+    <h3>Name</h3>
+    <h3>Price</h3>
+    <h3>Quantity</h3>
+    <h3>Sub-Total</h3>
+    <h3>Remove</h3>
+</div>
+{% for c in car %}
+<div class="Cart2">
+    <div>
+        <img class="Cart6" src="{{c.Image.url}}">
+        <p><b>Product Name:</b>{{c.Name}}</p>
+    </div>
+    <div>
+        <p>&#8377 {{c.Price}} </p>
+    </div>
+    <div>
+        <p>{{c.Quantity}}</p>
+    </div>
+    <div>
+        <p>&#8377 {{c.Sub_Total}}</p>
+    </div>
+    <div>
+        <a href="deletecart?Id={{c.Index_Id}}">
+            <img class="Cart5" src="{% static 'Images/Icon/garbage.png' %}">
+        </a>
+    </div>
+</div>
+{% endfor %}
+<div class="Cart3" >
+    <div>
+        <p><b>Total Price : </b>&#8377 {{t}}</p>
+    </div>
+</div>
+<div class="Cart4">
+    <div>
+        <a href="fproduct"><button>Continue Shopping</button></a>
+        <form action="check" method="POST" >
+            {% csrf_token %}
+            <input type="hidden" name="Total" value="{{t}}">
+            <button type="submit">Proceed to Checkout</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

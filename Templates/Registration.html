@@ -1,0 +1,123 @@
+{% extends 'Home_Base.html' %}
+{% block Home %}
+<title>Farmer Registration</title>
+{% load static %}
+<style>
+    .reg{float: left;width: 100%;height: 850px; margin-top: 5px;border-radius: 10px;background-image: url(color.jpg);background-size: cover;}
+    .reg1{position: absolute;top: 85%;left: 50%;background-color: rgba(18, 37, 143, 0.315); transform: translate(-50%,-50%);width: 80%;height: 750px;float: left;border-radius: 10px;}
+    .reg2{float: left;width: 100%;height: 60px;font-size: xx-large;border-radius: 10px;border-bottom: #01ff0a 5px solid;}
+    .reg2 b{float: left; margin-top:10px;width: 100%;height: 40px;color: lime; text-align: center;}
+    .reg4{float: left;width: 100%;height: 50px;margin-top: 20px;}
+    .reg4 div{float: left;width: 45%;height: 50px;margin-left: 50px;}
+    .reg4 div label{float: left;width: 30%;height: 50px;font-size: larger;}
+    .man{float: left;width: 100%;height: 20px;color: red;}
+    .man div{float: left;width: 40%;height: 20px;margin-left: 50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    .reg4 div input{width: 50%;height: 35px;outline: none;border-radius: 5px;}
+    .reg1 sup{color: red;}
+    .captcha{float: left;width: 100%;height: 50px;text-align: center;margin-top: 10px;}
+    .captcha label{font-size: larger;text-align: center;}
+    .box2{width: 20%;height: 45px;text-align: center;border-radius: 10px;outline: none;}
+    .captcha button{text-align: center;width: 12%;height: 40px;border-radius: 5px;background-color: antiquewhite;font-weight: bold;font-size: large;}
+    .captcha a{text-decoration: none;color: white;}
+    .captcha p{font-size: large;}
+</style>
+<div class="reg" style="background-image: url({% static 'Images/Pics/color.jpg' %})">
+    {% for i in messages %}
+        <h3>{{i}}</h3>
+    {% endfor %}
+    <form action="registration" method="POST">
+        {% csrf_token %}
+        <div class="reg1">
+            <div class="reg2">
+               <b>Farmer Registration</b> 
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>First Name  :  </label>
+                    <input type="text" name="fname" placeholder="Enter First Name" required>
+                </div>
+                <div>
+                    <label><sup>*</sup>Last Name  :  </label>
+                    <input type="text" name="lname" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>Mobile No  :  </label>
+                    <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
+                </div>
+                <div>
+                    <label><sup>*</sup>Email  :  </label>
+                    <input type="email" name="email" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>House No  :  </label>
+                    <input type="text" name="houseno" placeholder="Enter House No">
+                </div>
+                <div>
+                    <label><sup>*</sup>Village  :  </label>
+                    <input type="text" name="village" placeholder="Enter Village">
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>Mandal  :  </label>
+                    <input type="text" name="mandal" placeholder="Enter Mandal">
+                </div>
+                <div>
+                    <label><sup>*</sup>District  :  </label>
+                    <input type="text" name="district" placeholder="Enter District">
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>State  :  </label>
+                    <input type="text" value="Telangana" name="state" placeholder="Enter State">
+                </div>
+                <div>
+                    <label><sup>*</sup>Aadhaar Number  :  </label>
+                    <input type="number" name="aadhaar" placeholder="Enter Aadhaar Number" required>
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>P-B Number :  </label> 
+                    <input type="text" name="passbook" placeholder="Enter PB Number" required >
+                </div>
+                <div>
+                    <label><sup>*</sup>Land  :  </label>
+                    <input type="text" name="land" placeholder="Land In Acers" required>
+                </div>
+            </div>
+            <div class="reg4" >
+                <div>
+                    <label><sup>*</sup>Password  :  </label>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div>
+                    <label><sup>*</sup>Confirm Password  :  </label>
+                    <input type="password" name="password1" placeholder="Re-Enter Password" required>
+                </div>
+            </div>
+            <div class="captcha">
+                <button type="submit">REGISTER</button>
+            </div>
+            <div class="captcha">
+                <p>Already Have An Account?<a href="customer_login">Click Here</a> to Login</p>
+            </div>
+            <div class="man" >
+                <div>
+                    *Mandotary Fields,
+                </div>
+            </div>
+            <div class="man" >
+                <div>
+                    *Please Provide Proper Details.
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

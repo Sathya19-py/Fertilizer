@@ -1,0 +1,42 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Update Product</title>
+{% load static %}
+<form action="updatep" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="Update_Product1">
+        <div class="Update_Product2">
+            <div class="Update_Product3">
+                <u>Update Product</u>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Id : </label>
+                <input type="number" value="{{data.id}}" name="id" readonly required>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Name : </label>
+                <input type="text" value="{{data.Name}}" name="Name" required>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Price : </label>
+                <input type="number" value="{{data.Price}}" name="Price" required>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Quantity : </label>
+                <input type="number" value="{{data.Quantity}}" name="Quantity" required>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Weight : </label>
+                <input type="number" value="{{data.Weight}}" name="Weight" required>
+            </div>
+            <div class="Update_Product3">
+                <label>Product Weight In : </label>
+                <input type="text" value="{{data.Weight1}}" name="Weight1" required>
+            </div>
+            <div class="Update_Product3">
+                <button type="submit">Update Product</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

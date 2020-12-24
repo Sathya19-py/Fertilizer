@@ -1,0 +1,49 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Add Product</title>
+{% load static %}
+<form action="add" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="Add_Product1">
+        <div class="Add_Product2">
+            <div class="Add_Product3">
+                <u>Add Product</u>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Name : </label>
+                <input type="text" placeholder="Enter Product Name" name="Name" required>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Price : </label>
+                <input type="number" placeholder="Enter Product Price" maxlength="10" name="Price" required>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Quantity : </label>
+                <input type="number" placeholder="Enter Product Quantity" name="Quantity" required>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Weight : </label>
+                <input type="number" placeholder="Enter Product Weight" name="Weight" required>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Weight In : </label>
+                <input type="text" placeholder="Enter Product Weight Lit/Kg" name="Weight1" required>
+            </div>
+            <div class="Add_Product4">
+                <label>Description : </label>
+                <textarea rows="4" cols="25" placeholder="Description" name="Description" required></textarea>
+            </div>
+            <div class="Add_Product3">
+                <label>Product Image : </label>
+                <input type="file" placeholder="Enter Product Name" name="Image" required>
+            </div>
+            <div class="Add_Product3">
+                <button type="submit">Add Product</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% for mess in messages %}
+    <h3>{{mess}}</h3>
+{% endfor %}
+{% endblock %}

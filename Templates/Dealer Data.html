@@ -1,0 +1,55 @@
+{% extends 'Admin_Base.html' %}
+{% block Admin %}
+<title>Dealer Data</title>
+{% load static %}
+<style>
+    .DD1{float: left;height: 550px;width: 100%;background-color: rgba(237, 241, 241, 0.644);margin-top: 5px;}
+    .DD1 div{float: left;width: 90%;transform: translate(-50,-50);position: absolute;top: 25%;left: 5%;}
+    .DD1 table{width: 100%;border: 1px solid black;}
+    .DD1 table th{border:1px solid black;height: 35px;}
+    .DD1 table td{border:1px solid black;text-align: center;width: 10%;}
+    .DD1 button{height: 30px;width: 80px;background-color: chartreuse;border-radius: 10px;outline: none;font-weight: bold;margin-top: 10px;cursor: pointer;font-size: large;}
+    .DD2{font-size: 25px;font-style: italic;}
+</style>
+<div class="DD1">
+    <div>
+        <table>
+            <tr><th colspan="9" class="DD2">Dealer_List</th></tr>
+            <tr>
+                <th>Full Name</th>
+                <th>Email Id</th>
+                <th>Mobile No</th>
+                <th>Shop Name</th>
+                <th>Shop Id</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in s %}
+            <tr>
+                <td>{{i.Full_Name}}</td>
+                <td>{{i.Email_Id}}</td>
+                <td>{{i.Mobile_No}}</td>
+                <td>{{i.Shop_Name}}</td>
+                <td>{{i.Shop_Id}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.Address}}</td>
+                <td>
+                    <form action="adminupseller" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{i.id}}">
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+                <td>
+                    <a href="admindeleteseller?id={{i.id}}">
+                        <img width="60" height="60" src="{% static 'Images/Icon/garbage.png' %}">
+                    </a>
+                </td>
+            </tr> 
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

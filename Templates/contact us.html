@@ -1,0 +1,52 @@
+{% extends 'Home_Base.html' %}
+{% block Home %}
+<title>Contact Us</title>
+{% load static %}
+<div class="Contact1" style="background-image: url({% static 'Images/Pics/sea.jpg' %})">
+    <div class="Contact2">
+        <h1>Get in touch</h1>
+        <p>Want to get in touch?We'd love to hear from you.Here's how you can reach us....</p>
+    </div>
+    <div class="Contact3">
+        <form>
+            <div class="Contact4">
+                <u><h2>Message Us.....</h2></u>
+                <div class="Contact6">
+                    <div>
+                        <label>First Name :</label><br>
+                        <input type="text" name="Contact FName" placeholder="Enter Here" required >
+                    </div>
+                    <div>
+                        <label>Last Name :</label><br>
+                        <input type="text" name="Contact LName" placeholder="Enter Here" required>
+                    </div>
+                </div>
+                <div class="Contact6">
+                    <div>
+                        <label>Mobile Number :</label><br>
+                        <input type="tel" name="Contact MNumber" placeholder="Enter Here" pattern="^\d{10}$" required>
+                    </div>
+                    <div>
+                        <label>Email-Id :</label><br>
+                        <input type="email" name="Contact Email" placeholder="Enter Her" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters must be in lower case" required>
+                    </div>
+                </div>
+                <div class="Contact7">
+                    <label>Text Here :</label><br>
+                    <textarea name="messege" placeholder="Enter Here" required></textarea>
+                </div>
+                <div class="Contact6">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+        <div class="Contact5">
+            <u><h2>We are here.....</h2></u>
+            <div class="Contact8">
+                Google Map here
+                <img src="{% static 'Images/Pics/torch.jpg' %}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

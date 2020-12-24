@@ -1,0 +1,59 @@
+{% extends 'Admin_Base.html' %}
+{% block Admin %}
+<title>Govt Data</title>
+{% load static %}
+<style>
+    .GG1{height: 650px;width: 100%;background-color: whitesmoke;margin-top: 5px;}
+    .GG1 div{float: left;width: 80%;transform: translate(-50,-50);position: absolute;top: 28%;}
+    .GG1 table{width: 80%;border: 1px solid black;}
+    .GG1 table th{border:1px solid black;height: 35px;color: rgb(7, 7, 77);}
+    .GG1 table td{border:1px solid black;text-align: center;width: 10%;}
+    .GG2 {font-size: 25;text-decoration: underline;}
+    .GG3{float: right;width: 150px;height: 35px;margin-right: 50px;margin-top: 10px;font-weight: bolder;font-size: large;color: whitesmoke;background-color: green;border-radius: 10px;outline: none;}
+    .GG3:hover{color: black;background-color: blue;}
+</style>
+<div class="GG1">
+    <a href="govtaddfarmer" >
+        <button class="GG3">Add Farmer</button>
+    </a>
+    <div>
+        <table>
+            <tr><th colspan="7" class="GG2">Farmer's Official Data</th></tr>
+            <tr>
+                <th>Full Name</th>
+                <th>Aadhaar Number</th>
+                <th>PassBook Number</th>
+                <th>Land</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for item in i %}
+                <tr>
+                    <td>{{item.First_Name}} {{item.Last_Name}}</td>
+                    <td>{{item.Aadhaar_Number}}</td>
+                    <td>{{item.PassBook_Number}}</td>
+                    <td>{{item.Land}}</td>
+                    <td>
+                        {{item.House_Number}},
+                        {{item.Village_Name}},
+                        {{item.Mandal_Name}},
+                        {{item.District_Name}},
+                        {{item.State_Name}}
+                    </td>
+                    <td>
+                        <a href="govtupfarmer?id={{item.id}}">
+                            Update
+                        </a>
+                    </td>
+                    <td>
+                        <a href="govtdeletefarmer?id={{item.id}}">
+                            <img width="50" height="50" src="{% static 'Images/Icon/garbage.png' %}">
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

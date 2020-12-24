@@ -1,0 +1,109 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Dealer Home</title>
+{% load static %}
+<div class="Dealer_Home2">
+    <div class="Dealer_Home3">
+        
+            <b><u>Your Profile</u></b>
+        
+        <div>
+            <label>Your Name </label>
+            : -------------
+        </div>
+        <div>
+            <label>Contact Number </label>
+            : -------------
+        </div>
+        <div>
+            <label>Email-Id</label>
+            : -------------
+        </div>
+        <div>
+            <label>Shop Name </label>
+            : -------------
+        </div>
+        <div>
+            <label>Shop Id </label>
+            : -------------
+        </div>
+        <div>
+            <label>Shop Address</label>
+            : -------------
+        </div>
+        <div>
+            <a href="">Edit your profile</a>
+        </div>
+    </div>
+    <div class="Dealer_Home4">
+        <u>Your Account Details : </u>
+        <div>
+            <label>Account Number </label>
+            : -------------
+        </div>
+        <div>
+            <label>Holder Name </label>
+            : -------------
+        </div>
+        <div>
+            <label>IFSC Code</label>
+            : -------------
+        </div>
+        <div>
+            <label>Bank Name </label>
+            : -------------
+        </div>
+        <div>
+            <label>Mobile Number </label>
+            : -------------
+        </div>
+        <div>
+            <label>Email-Id</label>
+            : -------------
+        </div>
+        <div>
+            <a href="">Edit your account</a>
+        </div>
+    </div>
+</div>
+<div class="Dealer_Home5">
+    <div class="Dealer_Home6">
+        <table>
+            <tr>
+                <th colspan="5">
+                    <u>Payment Details</u>
+                </th>
+            </tr>
+            <tr>
+                <th>Order_Id</th>
+                <th>Payment_Via</th>
+                <th>Payment_Id</th>
+                <th>Payment_Date</th>
+                <th>Payment_Status</th>
+            </tr>
+            
+                <tr>
+                    <td>OD152154547</td>
+                    <td>Credit Card</td>
+                    <td>0012452112</td>
+                    <td>25-10-2018</td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>OD152154812</td>
+                    <td>COD</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>OD152154924</td>
+                    <td>Debit Card</td>
+                    <td>0021461132</td>
+                    <td>10-12-2018</td>
+                    <td>Success</td>
+                </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

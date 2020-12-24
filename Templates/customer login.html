@@ -1,0 +1,33 @@
+{% extends 'Home_Base.html' %}
+{% block Home %}
+<title>Farmer Login</title>
+{% load static %}
+<form>
+    <div class="customer1" style="background-image: url({% static 'Images/Pics/rom.jpg' %})">
+        <div class="customer2">
+            <b>Customer Login</b>
+            <div class="customer3">
+                <img class="customer4" src="{% static 'Images/Icon/people.png' %}"></img>
+                <input type="text" placeholder="Username" required maxlength="15"></input>
+            </div>
+            <div class="customer3">
+                <img class="customer5" src="{% static 'Images/Icon/lock.png' %}"></img>
+                <input type="password" placeholder="Password" required maxlength="10"></input>
+            </div>
+            <div class="customer8">
+                <p class="customer9"><input type="checkbox"> Remember Me</input></p>
+            </div>
+            <div class="customer6">
+                <button type="submit" >Login</button>
+                <a style="color: red;" href="fhome" >Login</a>
+            </div>
+            <div class="customer7">
+                <a href="#">Forget Password?/Username</a>
+            </div>
+            <div class="customer7">
+                <p><a href="registration">Click Here To Register</a></p>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

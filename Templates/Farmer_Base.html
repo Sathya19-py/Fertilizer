@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <link href="{% static 'CSS/home.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="d1">
+            <div class="b1" >
+                <div class="logo">
+                    <img src="{% static 'Images/Logo/my.png' %}">
+                </div>
+                <div class="d2" >
+                    <form action="single" method="POST">
+                        {% csrf_token %}
+                        <input type="text" required name="Name" placeholder="Search Product,Details">
+                        <button type="submit" >Search</button>
+                    </form>
+                </div>
+                <div class="d3" >
+                    <p><b>Contact No:</b> +91-9550027195 , 9666412540</p> 
+                    <p><b>Email Id :</b> info@e-fertilizers.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="Farmer_Home1">
+            <a href="fhome">Home</a>
+            <a href="fproduct">Products</a>
+            <a href="fcart">Cart<sup>{{c}}</sup></a>
+            <a href="forders">Your Orders</a>
+            <a href="fnotifications">Notifications</a>
+            <a href="ftrack">Track Your Orders</a>
+            <a href="finfo">Your Info</a>
+            <a href="/">Logout</a>
+        </div>
+        {% block Farmer %}
+        
+        {% endblock %}
+    </body>
+</html>

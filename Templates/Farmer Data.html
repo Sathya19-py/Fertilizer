@@ -1,0 +1,57 @@
+{% extends 'Admin_Base.html' %}
+{% block Admin %}
+<title>Farmer Data</title>
+{% load static %}
+<style>
+    .FF1{float: left; height: 100%;width: 100%;background-color: white;}
+    .FF1 div{float: left;width: 90%;transform: translate(-50,-50);position: absolute;top: 28%;right: 23.5%;}
+    .FF1 table{border: 1px solid black;width: 100%;}
+    .FF1 table th{border:1px solid black;width: 10.3%;height: 40px;color: red;}
+    .FF1 table td{border:1px solid black;text-align: center;}
+    .FF2 {font-size: 25;}
+</style>
+<div class="FF1">
+    <div>
+        <table>
+            <tr><th colspan="10" class="FF2">Farmer_List</th></tr>
+            <tr>
+                <th>Full Name</th>
+                <th>Aadhaar Number</th>
+                <th>PassBook Number</th>
+                <th>Email Id</th>
+                <th>Mobile Number</th>
+                <th>Land</th>
+                <th>Address</th>
+                <th>Password</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{i.First_Name}} {{i.Last_Name}}</td>
+                <td>{{i.Aadhaar_Number}}</td>
+                <td>{{i.PassBook_Number}}</td>
+                <td>{{i.Email_Id}}</td>
+                <td>{{i.Mobile_Number}}</td>
+                <td>{{i.Land}}</td>
+                <td>{{i.House_Number}},
+                    {{i.Village_Name}},
+                    {{i.Mandal_Name}},
+                    {{i.District_Name}},
+                    {{i.State_Name}},
+                </td>
+                <td>{{i.Password}}</td>
+                <td>
+                    <button type="submit">Update</button>
+                </td>
+                <td>
+                    <a href="adminfarmerdelete?id={{i.id}}">
+                        <img width="50" height="50" src="{% static 'Images/Icon/garbage.png' %}">
+                    </a>
+                </td>
+            </tr>    
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

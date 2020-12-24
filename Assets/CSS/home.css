@@ -1,0 +1,600 @@
+/* Main Menu CSS Started */
+
+.up{float: right;width: 14%;height: 25px;font-family: sans-serif; text-decoration: none;color: antiquewhite;font-weight: bold;background-color: green;margin-right: 4px; padding-top: 6px;}
+.up1{float: right;width: 71%;height: 25px;background-color: green;margin-right: 4px; padding-top: 6px;}
+.d1{float: left;width: 100%;height: 110px;background-color: rgba(124, 151, 202, 0.24);}
+.b1{float: left;width: 100%;height: 50px;}
+.logo{float: left; width: 30%;height: 60px;margin-left: 20px;}
+.logo img{float: left; width: 55%;height: 120px;}
+.d2{float: left;width: 40%;height: 50px;}
+.d2 input{width: 50%;height: 33px;margin-top: 40px;border-radius: 10px;outline: none;}
+.d2 button{height: 35px;width: 18%;background-color: blueviolet; border-radius: 10px;outline: none;font-family: sans-serif;}
+.d3{float: left; width: 25%;height: 50px;margin-top: 10px;}
+.d3 p{color: black;}
+.h1{float: left;width: 100%;height: 30px;background-color: whitesmoke; text-align: center;list-style: none;color: antiquewhite;}
+.h2{float: left;width: 14%;height: 25px;font-family: sans-serif; text-decoration: none;color: antiquewhite;font-weight: bold;background-color: green;margin-left: 4px; padding-top: 6px;}
+.h3{float: left;width: 14%;position: relative;background-color:green;padding-top: 6px;height: 25px;margin-left: 3px;}
+.h4{font-family: sans-serif;border: none;font-weight: bold;color: antiquewhite;text-decoration: none;}
+.h5{list-style: none;width: 100%;display: none;position: absolute;margin-top: 8px;}
+.h6{float: left; width: 99%;height: 28px;text-decoration: none;border: 1px solid black;background-color: lime;border-radius: 2px;font-family: sans-serif;font-weight: bold;padding-top: 5px;}
+
+.h2:hover{color: black;background-color: blue;}
+.h3:hover{color: black; background-color: blue;}
+.h3:hover .h5{display: block;}
+.h4:hover{color: black;background-color: blue;}
+.up:hover{color: black;background-color: blue;}
+
+/* Main Menu CSS Ended */
+/*-----------------------------------------------------------------------------------------------*/
+/* Home Page CSS Started */
+
+.sea{float: left;width: 100%;height: 350px;margin-top: 5px;}
+.sea img{float: left;width: 100%;height: 350px;}
+
+/* slider css Started */
+
+.slider1{
+    margin-top: 5px;
+    width: 100%;
+    height: 400px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    background: white;
+    
+    }
+
+@keyframes sliding{
+    0%{left: 0%;}
+    25%{left: -100%;}
+    50%{left: -200%;}
+    75%{left: -300%;}
+    100%{left: -400%;}
+    100%{left: 0%;}
+    }       
+    
+.slider{overflow: hidden;}
+.slide img{width: 20%;height: 500px;float: left;}
+.slide{
+    overflow: hidden;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    animation: 20s sliding ease infinite;       
+}
+
+.d6{float: left;width: 100%;height: 300px;margin-top: 1px;}
+.d6 img{float: left;width: 45%;height: 275px;padding: 10;}
+.d7{float: left;width: 45%;height: 275px;padding: 20px;text-align: center;}
+.d7 b{font-size: xx-large;}
+.d7 p{font-size: large;text-align: justify;}
+
+/*   slider CSS Ended  */
+/*-----------------------------------------------------------------------------------------------*/
+/* Home Page  Products CSS Started Here */
+
+.Product1{float: left;width: 100%;height: 950px;margin-top: 5px;background-color: rgba(95, 158, 160, 0.205);}
+.Product2{float: left;width: 100%;height: 400px;margin-top: 5px;}
+.Product7{float: left;width: 100%;height: 400px;margin-top: 50px;}
+.Product3{float: left; width: 26%;height: 400px; background-color: whitesmoke;margin-left: 80px;border-radius: 5px;box-sizing: content-box;text-align: center;}
+.Product4{float: left;width: 100%;height: 150px;}
+.Product3 img{width: 40%;height: 100px;margin-top: 20px;border-radius: 10px;}
+.Product3 button{width: 50%;height: 35px;margin-top: 10px;background-color: rgba(95, 158, 160, 0.658);outline: none;border-radius: 10px;font-family: sans-serif;font-weight: bold;}
+.Product5{padding-left: 40px;padding-right: 40px;text-align: justify;}
+.Product6{float: left;width: 100%;height: 45px;}
+.Product6 a{float: right;margin-right: 50px;text-decoration: none;font-weight: bold;font-family: sans-serif;}
+.Product6 b{float: left; font-family: sans-serif;width: 25%;font-size: large;color: rgb(19, 19, 82);margin-left: 30px;}
+.Product3:hover{box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);border-radius: 15px;}
+
+/* Home Page Products CSS Ended Here */
+
+/* Home Page CSS Ended */
+/*-----------------------------------------------------------------------------------------------*/
+/* Footer CSS Started */
+
+footer{float: left;width: 100%;height: 320px;background-color: rgb(29, 255, 9);border-radius: 5px;margin-top: 5px;}
+.f1{float: left;width: 25%;color: whitesmoke;margin-left: 90px;margin-top: 50px;}
+.f1 b{font-size: larger; color: black;font-family: cursive;}
+.f2{font-style: italic; text-align: justify;margin-top: 30px;color: black;}
+.f4{float: left;width: 100%;height: 30px;}
+.f5{float: left;width: 100%;height: 200px;margin-top: 25px;}
+.f5 div{float: left;width: 50%;}
+.f5 a{float: left;width: 100%;text-decoration: none;color: white;font-size: large;margin-top: 5px;color: black;font-style: italic;}
+.f1 img{width: 7%;height: 20px;}
+.f1 p{color: black;font-style: oblique;}
+
+/* Footer CSS Ended */
+/*-----------------------------------------------------------------------------------------------*/
+/* Products Page CSS Started Here */
+
+.Product11{float: left;width: 100%;height: 950px;margin-top: 5px;background-color: rgba(95, 158, 160, 0.205);}
+.Product22{float: left;width: 100%;height: 400px;margin-top: 30px;}
+.Product33{float: left; width: 22%;height: 400px; background-color: whitesmoke;margin-left: 35px;border-radius: 5px;box-sizing: content-box;text-align: center;}
+.Product44{float: left;width: 100%;height: 125px;}
+.Product44 img{width: 40%;height: 100px;margin-top: 15px;border-radius: 10px;}
+.Product33 button{width: 50%;height: 35px;margin-top: 10px;background-color: rgba(95, 158, 160, 0.836);outline: none;border-radius: 10px;font-family: sans-serif;font-weight: bold;}
+.Product55{padding-left: 30px;padding-right: 30px;text-align: justify;}
+.Product33:hover{box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);border-radius: 15px;}
+.Product33 button:hover{box-shadow: 2px 2px 10px rgba(39, 80, 82, 0.589);}
+
+/* Products Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Farmer Registration Page CSS Started Here*/
+
+.reg{float: left;width: 100%;height: 975px; margin-top: 5px;border-radius: 10px;background-image: url(color.jpg);background-size: cover;}
+.reg1{position: absolute;top: 92%;left: 50%;background-color: rgba(18, 37, 143, 0.315); transform: translate(-50%,-50%);width: 80%;height: 850px;float: left;border-radius: 10px;}
+.reg2{float: left;width: 100%;height: 60px;font-size: xx-large;border-radius: 10px;border-bottom: #01ff0a 5px solid;}
+.reg2 b{float: left; margin-top:10px;width: 100%;height: 40px;color: lime; text-align: center;}
+.reg4{float: left;width: 100%;height: 50px;margin-top: 20px;}
+.reg4 div{float: left;width: 45%;height: 50px;margin-left: 50px;}
+.reg4 div label{float: left;width: 30%;height: 50px;font-size: larger;}
+.man{float: left;width: 100%;height: 20px;color: red;}
+.man div{float: left;width: 40%;height: 20px;margin-left: 50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.reg4 div input{width: 50%;height: 35px;outline: none;border-radius: 5px;}
+.reg1 sup{color: red;}
+.captcha{float: left;width: 100%;height: 50px;text-align: center;margin-top: 10px;}
+.captcha label{font-size: larger;text-align: center;}
+.box2{width: 20%;height: 45px;text-align: center;border-radius: 10px;outline: none;}
+.captcha button{text-align: center;width: 12%;height: 40px;border-radius: 5px;background-color: antiquewhite;}
+.captcha a{text-decoration: none;color: white;}
+.captcha p{font-size: large;}
+
+/* Farmer Registration Page CSS Closed Here*/
+/*-----------------------------------------------------------------------------------------------*/
+/* Farmer Login In Page CSS Started */
+
+.customer1{float: left;text-align: center; background-image: url(rom.jpg);width: 100%;height: 550px;background-size: cover;margin-top: 5px;border-radius: 5px;}
+.customer2{float: left;text-align: center;transform: translate(-50,-50);position: absolute; width: 25%;height: 350px;top: 36%;left: 36%; border: 2px solid lime;background-color: rgba(0, 0, 0, 0.603);border-radius: 10px;}
+.customer2 b{float: left; text-align: center;border-bottom: 5px solid lime;width: 80%;height: 45px; margin-left: 40px;color: gainsboro;font-size: xx-large;margin-top: 5px;border-radius: 5px;}
+.customer3{float: left;width: 50%;height: 30px;margin-top: 20px;border-bottom: 1px solid lime;margin-left: 24%}
+.customer3 input{float: left;text-align: center; width: 80%;height: 30px; background: none;outline: none;border: none;font-size: large;color: gainsboro;}
+.customer4{float: left; width: 18px;height: 18px;margin-left: 2px;}
+.customer5{float: left; width: 22px;height: 25px;}
+.customer6{float: left;width: 100%;height: 50px;text-align: center; margin-top: 25px;}
+.customer6 button{width: 35%;height: 35px;background: none;border: 2px solid lime;cursor: pointer;font-size:x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: gainsboro;border-radius: 20px;;outline: none;}
+.customer7{float: left;width: 100%;height: 20px; text-align: center;margin-top: 5px;}
+.customer7 a{ text-align: center;color: lime; text-decoration: none;font-size: larger;}
+.customer7 p{text-align: center;color: lime;}
+.customer8{float: left;text-align: center; width: 100%;height: 30px;color: gainsboro;font-size: large;}
+.customer9{margin-top: 10px;margin-right: 70px;}
+
+/*  Farmer Login Sign In Page CSS Closed */
+/*-----------------------------------------------------------------------------------------------*/
+/* Seller Login Page CSS Started */
+
+.SellerLog1{float: left;text-align: center; background-image: url(rom.jpg);width: 100%;height: 550px;background-size: cover;margin-top: 5px;border-radius: 5px;}
+.SellerLog2{float: left;text-align: center;transform: translate(-50,-50);position: absolute; width: 25%;height: 350px;top: 36%;left: 36%; border: 2px solid lime;background-color: rgba(0, 0, 0, 0.603);border-radius: 10px;}
+.SellerLog2 b{float: left; text-align: center;border-bottom: 5px solid lime;width: 80%;height: 45px; margin-left: 40px;color: gainsboro;font-size: xx-large;margin-top: 5px;border-radius: 5px;}
+.SellerLog3{float: left;width: 50%;height: 30px;margin-top: 20px;border-bottom: 1px solid lime;margin-left: 24%}
+.SellerLog3 input{float: left;text-align: center; width: 80%;height: 30px; background: none;outline: none;border: none;font-size: large;color: gainsboro;}
+.SellerLog4{float: left; width: 18px;height: 18px;margin-left: 2px;}
+.SellerLog5{float: left; width: 22px;height: 25px;}
+.SellerLog6{float: left;width: 100%;height: 50px;text-align: center; margin-top: 25px;}
+.SellerLog6 button{width: 35%;height: 35px;background: none;border: 2px solid lime;cursor: pointer;font-size:x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: gainsboro;border-radius: 20px;;outline: none;}
+.SellerLog7{float: left;width: 100%;height: 20px; text-align: center;margin-top: 5px;}
+.SellerLog7 a{ text-align: center;color: lime; text-decoration: none;font-size: larger;}
+.SellerLog7 p{text-align: center;color: lime;}
+.SellerLog8{float: left;text-align: center; width: 100%;height: 30px;color: gainsboro;font-size: large;}
+.SellerLog9{margin-top: 10px;margin-right: 70px;}
+
+/* Seller Login Page CSS Closed */
+/*-----------------------------------------------------------------------------------------------*/
+/* Sell With Us Page CSS Started Here*/
+
+.sel1{background-image: url(color.jpg); width: 100%;height: 750px;float: left;background-size: cover;margin-top: 5px;border-radius: 5px;}
+.sel2{position: absolute;top: 80%;left: 50%; transform: translate(-50%,-50%);width: 40%;height: 675px;float: left;border-radius: 10px;background-color: rgba(18, 37, 143, 0.315);}
+.sel3{float: left;width: 100%;height: 40px;color: black;border-bottom: #01ff0a 5px solid;}
+.sel4{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;margin-top: 5px;font-size: x-large;}
+.sel6{float: left;width: 50%;height: 450px;}
+.sel7{float: left;width: 50%;height: 450px;}
+.sel8{float: left;width: 100%;height: 50px;font-size: large;margin-top: 25px;}
+.sel9{width: 50%;height: 30px;margin-left: 40px;}
+.sel10{width: 85%;height: 35px;border-radius: 5px;margin-left: 40px;outline: none;}
+.sel8 sup{color: red;font-size: larger;}
+.sel8 textarea{width: 85%;height: 75px;border-radius: 5px;margin-left: 40px;outline: none;}
+.sel8 a{color: whitesmoke;}
+.sel12{margin-left: 40px;margin-top: 50px;text-decoration: none;}
+.sel13{width: 30%;height: 30px;background-color: aqua;font-weight: 700;margin-left: 100px;border-radius: 5px;padding: 5px;margin-top: 5px;}
+.sel14{float: left;width: 100%;height: 150px;text-align: center;}
+.sel15{float: left;width: 40%;height: 60px;text-align: center;margin-left: 80px;}
+.sel16{float: left;margin-left: 20px;font-size: large;}
+.sel17{text-decoration: none;color: whitesmoke;}
+
+/* Sell With Us Page CSS Started Here*/
+/*-----------------------------------------------------------------------------------------------*/
+/* Contact Us Page CSS Started Here */
+
+.Contact1{float: left;width: 100%;height: 650px;background-image: url(sea.jpg);background-size: cover;border-radius: 4px;margin-top: 5px;}
+.Contact2{float: left;text-align: center;height: 150px;width: 100%;}
+.Contact2 h1{color: aliceblue;}
+.Contact2 p{color: aliceblue;font-size: large;}
+.Contact3{float: left;width: 100%;height: 500px;text-align: center;}
+.Contact4{float: left;width: 40%;height: 450px;text-align: center;margin-top: 15px; margin-left: 120px;border-radius: 10px;background-color: rgba(222, 184, 135, 0.76);}
+.Contact5{float: left;width: 35%;height: 450px;text-align: center;margin-left: 80px;border-radius: 10px;background-color:  rgba(222, 184, 135, 0.76);}
+.Contact6 {float: left;width: 100%;height: 70px;}
+.Contact6 div{float: left;width: 40%;height: 50px;margin-left: 50px;text-align: center;}
+.Contact6 div label{float: left; font-size: large;}
+.Contact6 div input{float: left; width: 100%;height: 32px;}
+.Contact7{float: left;width: 90%;height: 100px;margin-left: 50px;}
+.Contact7 label{float: left;font-size: large;}
+.Contact7 textarea{float: left; width: 98%;height: 100px;}
+.Contact6 button{float: left;margin-top: 50px;margin-left: 50px;width: 20%;height: 45px;font-size: large;background-color: green;font-weight: bolder;}
+.Contact8{float: left;width: 80%;height: 350px;}
+.Contact8 img{float: left;text-align: center;width: 100%;height: 325px;margin-left: 60px;border-radius: 10px;}
+
+/* Contact Us Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Track Your Order Page CSS Started Here */
+
+.Track1{float: left;width: 100%;height: 500px;margin-top: 5px;text-align: center;background-color: rgba(95, 158, 160, 0.349);}
+.Track2{float: left;width: 35%;height: 275px;background-color: whitesmoke; transform: translate(-50,-50);left: 32%;top: 40%; position: absolute;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Track3{float: left;width: 100%;height: 50px;margin-top: 10px;}
+.Track3 label{font-weight: bolder;font-size: larger;}
+.Track3 input{height: 35px;width: 45%;border-radius: 5px;outline: none;cursor: pointer;font-size: large;}
+.Track2 button{width: 30%;height: 40px;margin-top: 30px;font-size: larger; border-radius: 15px;outline: none;border: black 2px solid;cursor: pointer;}
+
+/* Track Your Order Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Dealer CSS Started Here */
+
+/* Dealer Main Menu CSS Started Here */
+
+.d1{float: left;width: 100%;height: 110px;background-color: rgba(124, 151, 202, 0.24);}
+.b1{float: left;width: 100%;height: 50px;}
+.logo{float: left; width: 30%;height: 60px;margin-left: 20px;}
+.logo img{float: left; width: 55%;height: 120px;}
+.d2{float: left;width: 40%;height: 50px;}
+.d2 input{width: 50%;height: 33px;margin-top: 40px;border-radius: 10px;outline: none;}
+.d2 button{height: 35px;width: 18%;background-color: blueviolet; border-radius: 10px;outline: none;font-family: sans-serif;}
+.d3{float: left; width: 25%;height: 50px;margin-top: 10px;}
+.d3 p{color: black;}
+
+.Dealer_Home1{float: left;width:100% ;height: 35px;background-color: whitesmoke;}
+.Dealer_Home1 a{float: left;text-align: center; width: 16%;height: 25px;background-color: green;color: antiquewhite;text-decoration: none;font-family: sans-serif;margin-left: 8px; padding-top: 6px;font-weight: bold;margin-top: 2px;}
+.Dealer_Home1 a:hover{color: black;background-color: blue;}
+
+/* Dealer Main Menu CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Dealer Home Page CSS Started Here */
+
+.Dealer_Home2{float: left;width: 100%;height: 400px;background-color:  rgba(95, 158, 160, 0.205);}
+.Dealer_Home3{float: left;width: 45%;height: 325px;margin-top: 40px;text-align: center; margin-left: 48px;background-color: whitesmoke;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Dealer_Home3 b{text-align: center;margin-top: 10px;}
+.Dealer_Home3 u{font-family: sans-serif;font-size: x-large;color: rgb(43, 10, 78);}
+.Dealer_Home3 div{float: left;width: 100%;margin-top: 15px;text-align: justify;}
+.Dealer_Home3 div label{float: left;width: 30%;font-size: large;margin-left: 20px;}
+.Dealer_Home3 a{font-size: large;margin-left: 20px;}
+.Dealer_Home4{float: left;width: 45%;height: 325px;margin-top: 40px;margin-left: 48px;text-align: center;background-color: whitesmoke;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Dealer_Home4 u{font-weight: bold;font-family: sans-serif;font-size: x-large;color: rgb(43, 10, 78);}
+.Dealer_Home4 div{float: left;width: 100%;margin-top: 15px;text-align: justify;}
+.Dealer_Home4 a{font-size: large;margin-left: 20px;}
+.Dealer_Home4 div label{float: left;width: 35%;font-size: large;margin-left: 20px;}
+.Dealer_Home5{float: left;width: 100%;height: 350px;background-color:  rgba(95, 158, 160, 0.205);}
+.Dealer_Home6{float: left;width: 55%;height: 400px;transform: translate(-50,-50);top: 85%;left: 20%;position: absolute;border-radius: 5px;}
+.Dealer_Home6 table{width: 100%;border: 1px solid black;}
+.Dealer_Home6 u{font-weight: bold;font-family: sans-serif;font-size: x-large;color: rgb(43, 10, 78);}
+.Dealer_Home6 tr{height: 30px;}
+.Dealer_Home6 th{border: 1px solid black;width: 20%;color: rgb(80, 33, 80); font-weight: bold;font-size: large;}
+.Dealer_Home6 td{border: 1px solid black;text-align: center;height: 25px;}
+
+/* Dealer Home Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Dealer Home Page Products CSS Started Here */
+
+.Dealer_Product1{float: left;width: 100%;height: 470px;margin-top: 2px;background-color: rgba(95, 158, 160, 0.205);}
+.Dealer_Product2{float: left;width: 100%;height: 400px;margin-top: 30px;}
+.Dealer_Product3{float: left; width: 22%;height: 400px; background-color: whitesmoke;margin-left: 35px;border-radius: 5px;box-sizing: content-box;text-align: center;}
+.Dealer_Product4{float: left;width: 100%;height: 125px;}
+.Dealer_Product4 img{width: 40%;height: 100px;margin-top: 15px;border-radius: 10px;}
+.Dealer_Product3 button{width: 50%;height: 35px;margin-top: 10px;background-color: rgba(95, 158, 160, 0.836);outline: none;border-radius: 10px;font-family: sans-serif;font-weight: bold;}
+.Dealer_Product5{padding-left: 30px;padding-right: 30px;text-align: justify;}
+.Dealer_Product3:hover{box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);border-radius: 15px;}
+.Dealer_Product3 button:hover{box-shadow: 2px 2px 10px rgba(39, 80, 82, 0.589);}
+
+/* Dealer Home Page Products CSS Ended Here */
+
+/* Dealer Home Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Add Products Page CSS Started Here */
+
+.Add_Product1{float: left;width: 100%;height: 700px;margin-top: 2px;background-color: rgb(104, 228, 222)}
+.Add_Product2{float: left;width: 40%;height: 600px;background-color: rgba(255, 255, 255, 0.521);transform: translate(-50,-50);top: 32%;left: 30%;position: absolute;border-radius: 10px;}
+.Add_Product3{float: left;width: 100%;height: 40px;text-align: center;margin-top: 10px;}
+.Add_Product3 u{font-weight: bold;font-family: sans-serif;font-size: x-large;}
+.Add_Product2 input{width: 30%;height: 30px;}
+.Add_Product4{float: left;width: 100%;height: 70px;text-align: center;margin-top: 10px;}
+.Add_Product4 textarea{margin-left: 25px;}
+.Add_Product2 button{width: 25%;height: 30px;font-weight: bold;border-radius: 5px;background-color: aqua;}
+
+/* Add Products Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Delete and Update Products Page CSS Started Here */
+
+.Delete_Product1{float: left;width: 100%;height: 700px;margin-top: 2px;background-color: rgb(104, 228, 222)}
+.Delete_Product2{float: left;width: 80%;height: 400px;transform: translate(-50,-50);top: 30%;left: 10%;position: absolute;border-radius: 5px;}
+.Delete_Product2 u{font-weight: bold;font-size: x-large;text-align: center;color: rgb(43, 10, 78);}
+.Delete_Product2 table{width: 100%;border: 1px solid black;}
+.Delete_Product2 th{border: 1px solid black;width: 12%;color: rgb(80, 33, 80); font-weight: bold;font-size: large;}
+.Delete_Product2 td{border: 1px solid black;text-align: center;height: 25px;width: 12%;}
+.Delete_Product3{border-radius: 10px;margin-top: 5px;margin-bottom: 5px;height: 80px;width: 75%;}
+.Delete_Product2 tr{height: 35px;}
+.Delete_Product2 button{background-color: limegreen;color: white;width: 50%;width: 75%;height: 30px;border-radius: 10px;outline: none;color: black;font-weight: bold;font-size: medium;}
+.Delete_Product4{width: 50px;height: 50px;}
+
+/* Delete and Update Products Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Update Products Page CSS Started Here */
+
+.Update_Product1{float: left;width: 100%;height: 700px;margin-top: 2px;background-color: rgb(104, 228, 222)}
+.Update_Product2{float: left;width: 40%;height: 425px;background-color: rgba(255, 255, 255, 0.521);transform: translate(-50,-50);top: 35%;left: 30%;position: absolute;border-radius: 5px;border-radius: 15px;}
+.Update_Product3{float: left;width: 100%;height: 40px;text-align: center;margin-top: 10px;}
+.Update_Product3 u{font-weight: bold;font-family: sans-serif;font-size: x-large;}
+.Update_Product2 input{width: 30%;height: 30px;}
+.Update_Product4{float: left;width: 100%;height: 70px;text-align: center;margin-top: 10px;}
+.Update_Product4 textarea{margin-left: 25px;}
+.Update_Product2 button{width: 25%;height: 30px;font-weight: bold;border-radius: 5px;background-color: aqua;}
+
+/* Update Products Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Order Received Page CSS Started Here */
+
+.Order_Received1{float: left;width: 100%;height: 555px;margin-top: 2px;background-color: rgb(104, 228, 222)}
+.Order_Received2{float: left;width: 55%;height: 400px;transform: translate(-50,-50);top: 30%;left: 20%;position: absolute;border-radius: 5px;}
+.Order_Received2 u{font-weight: bold;font-size: x-large;text-align: center;color: rgb(43, 10, 78);}
+.Order_Received2 table{width: 100%;border: 1px solid black;}
+.Order_Received2 th{border: 1px solid black;width: 20%;color: rgb(80, 33, 80); font-weight: bold;font-size: large;}
+.Order_Received2 td{border: 1px solid black;text-align: center;height: 25px;}
+.Order_Received2 tr{height: 30px;}
+.Order_Received2 button{background-color: green;color: white;width: 50%;}
+
+/* Order Received Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/* Delivery Status Page CSS Started Here */
+
+.Delivery_Status1{float: left;width: 100%;height: 555px;margin-top: 2px;background-color: rgb(104, 228, 222)}
+.Delivery_Status2{float: left;width: 55%;height: 400px;transform: translate(-50,-50);top: 30%;left: 20%;position: absolute;border-radius: 5px;}
+.Delivery_Status2 u{font-weight: bold;font-size: x-large;text-align: center;color: rgb(43, 10, 78);}
+.Delivery_Status2 table{width: 100%;border: 1px solid black;}
+.Delivery_Status2 th{border: 1px solid black;width: 20%;color: rgb(80, 33, 80); font-weight: bold;font-size: large;}
+.Delivery_Status2 td{border: 1px solid black;text-align: center;height: 25px;}
+.Delivery_Status2 tr{height: 30px;}
+
+/* Delivery Status Page CSS Ended Here */
+
+/* Dealer CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer CSS Started Here */
+
+/* Farmer Main Menu CSS Started Here */
+@media screen and (max-width:800px){
+    .d1{width:50%;}
+}
+@media screen and (max-width:600px){
+    .d1{width:100%;}
+}
+.logo img{ max-width:100%;}
+@media screen and (max-width:800px){
+    .b1{width:50%;}
+}
+@media screen and (max-width:600px){
+    .b1{width:100%;}
+}
+
+.d1{float: left;width: 100%;height: 110px;background-color: rgba(124, 151, 202, 0.24);}
+.b1{float: left;width: 100%;height: 50px;}
+.logo{float: left; width: 30%;height: 60px;margin-left: 20px;}
+.logo img{float: left; width: 55%;height: 120px;}
+.d2{float: left;width: 40%;height: 50px;}
+.d2 input{width: 50%;height: 33px;margin-top: 40px;border-radius: 10px;outline: none;}
+.d2 button{height: 35px;width: 18%;background-color: blueviolet; border-radius: 10px;outline: none;font-family: sans-serif;}
+.d3{float: left; width: 25%;height: 50px;margin-top: 10px;}
+.d3 p{color: black;}
+
+.Farmer_Home1{float: left;width:100% ;height: 35px;background-color: whitesmoke;}
+.Farmer_Home1 a{float: left;text-align: center; width: 12.2%;height: 25px;background-color: green;color: antiquewhite;text-decoration: none;font-family: sans-serif;margin-left: 4px; padding-top: 6px;font-weight: bold;margin-top: 2px;}
+.Farmer_Home1 a:hover{color: black;background-color: blue;}
+
+@media screen and (max-width:800px){.d1{width:100%;height: 120px;}}
+@media screen and (max-width:600px){.d1{width:100%;height: 200px;}}
+@media screen and (max-width:800px){.d2{width:40%;}}
+@media screen and (max-width:600px){.d2{width:100%;}}
+@media screen and (max-width:800px){.d2 input{width:70%;}}
+@media screen and (max-width:600px){.d2 input{width:70%;}}
+@media screen and (max-width:800px){.d2 button{width:20%;}}
+@media screen and (max-width:600px){.d2 button{width:20%;}}
+@media screen and (max-width:800px){.d3{width:30%;}}
+@media screen and (max-width:600px){.d3{width:80%;}}
+
+@media screen and (max-width:800px){.logo{width:25%;}}
+@media screen and (max-width:600px){.logo{width:70%;}}
+@media screen and (max-width:800px){.logo img{width:80%;}}
+@media screen and (max-width:600px){.logo img{width:100%;}}
+
+@media screen and (max-width:800px){.Farmer_Home1{float: left;width:100% ;height: 35px;background-color: whitesmoke;}}
+@media screen and (max-width:600px){.Farmer_Home1{float: left;width:100% ;height: 100px;background-color: whitesmoke;}}
+@media screen and (max-width:800px){.Farmer_Home1 a{width:24.4%;}}
+@media screen and (max-width:600px){.Farmer_Home1 a{width:48.8%;}}
+@media screen and (max-width:800px){.Farmer_Home1 a:hover{width:24.4%;}}
+@media screen and (max-width:600px){.Farmer_Home1 a:hover{width:48.8%;}}
+
+/* Farmer Main Menu CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Home Page CSS Started Here */
+
+.Farmer_Home2{float: left;width: 100%;height: 400px;margin-top: 10px;}
+.Farmer_Home2 div{float: left;width: 47%;height: 350px;margin-top: 20px;border-radius:15px ;margin-left: 30px;box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);}
+.Farmer_Home2 div img{ width: 100%; height:350; border-radius:15px ; -webkit-border-radius:15px ; -moz-border-radius:15px ; -ms-border-radius:15px ; -o-border-radius:15px ; }
+.Farmer_Home2 div p{float: left;width: 90%;height:325px;margin-top:20 px;margin-left: 25px;margin-right: 25px;text-align: justify;font-size: large;}
+
+@media screen and (max-width:800px){.Farmer_Home2{float: left;width: 100%;height: 400px;margin-top: 20px;}}
+@media screen and (max-width:600px){.Farmer_Home2{float: left;width: 100%;height: 400px;margin-top: 20px;}}
+@media screen and (max-width:800px){.Farmer_Home2 div{float: left;width: 45%;height: 350px;margin-top: 20px;border-radius:15px ;margin-left: 30px;box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);}}
+@media screen and (max-width:600px){.Farmer_Home2 div{width: 95%;height: 350px;margin-top: 20px;border-radius:15px ;margin-left: 15px;box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);}}
+@media screen and (max-width:800px){.Farmer_Home2 div img{ width: 100%; height:350; border-radius:15px ; -webkit-border-radius:15px ; -moz-border-radius:15px ; -ms-border-radius:15px ; -o-border-radius:15px ; }}
+@media screen and (max-width:600px){.Farmer_Home2 div img{ width: 100%; height:350; border-radius:15px ; -webkit-border-radius:15px ; -moz-border-radius:15px ; -ms-border-radius:15px ; -o-border-radius:15px ; }}
+@media screen and (max-width:800px){.Farmer_Home2 div p{width: 80%;height:325px;margin-top:20 px;margin-left: 25px;margin-right: 25px;text-align: justify;font-size: large;}}
+
+/*  Farmer Home Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Products Page CSS Started Here */
+
+.Farmer_Product3{float: left; width: 22%;height: 430px; background-color: whitesmoke;margin-left: 35px;border-radius: 5px;box-sizing: content-box;text-align: center;margin-top: 30px;}
+.Farmer_Product4{float: left;width: 100%;height: 125px;}
+.Farmer_Product4 img{width: 40%;height: 100px;margin-top: 15px;border-radius: 10px;}
+.Farmer_Product3 button{width: 50%;height: 35px;margin-top: 5px;background-color: rgba(95, 158, 160, 0.836);outline: none;border-radius: 10px;font-family: sans-serif;font-weight: bold;}
+.Farmer_Product5{padding-left: 30px;padding-right: 30px;text-align: justify;}
+.Farmer_Product3:hover{box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);border-radius: 15px;}
+.Farmer_Product3 button:hover{box-shadow: 2px 2px 10px rgba(39, 80, 82, 0.589);}
+
+@media screen and (max-width:800px){.Farmer_Product3{float: left; width: 45%;height: 430px; background-color: whitesmoke;margin-left: 25px;border-radius: 5px;box-sizing: content-box;text-align: center;margin-top: 45px;}}
+@media screen and (max-width:600px){.Farmer_Product3{float: left; width: 95%;height: 430px; background-color: whitesmoke;margin-left: 10px;border-radius: 5px;box-sizing: content-box;text-align: center;margin-top: 45px;}}
+
+/*  Farmer Products Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Single Product Page CSS Started Here */
+
+.single1{float: left;width: 100%;height: 600px;background-color: lightseagreen;color: white;}
+.single2{float: left;width: 90%;height: 550px;transform: translate(-50,-50);top: 25%;left: 5%;position: absolute;}
+.single3{float: left;width: 35%;height: 400px;margin-left: 20px;margin-top: 15px;}
+.single4{float: left;width: 50%;height: 400px;margin-left: 40px;margin-top: 50px;text-align: justify;}
+.single5{float: left;width: 100%;height: 100px;margin-left: 20px;margin-top: 15px;}
+.single5 button{width: 25%;height: 35px;margin-left: 70px;border-radius: 10px;outline: none;}
+.single1 img{float: left;width: 65%;height: 90%;border-radius: 15px;margin-left: 50px;}
+
+/*  Farmer Single Product Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Cart Page CSS Started Here */
+
+.Cart1{margin-top: 5px; float: left;width: 100%;height: 50px;border-top: 2px solid black;border-bottom: 2px solid black;}
+.Cart1 h3{float: left; width: 20%;text-align: center;}
+.Cart2{float: left;width: 100%;height: 130px;border-top: 1px solid black;border-bottom: 1px solid black;text-align: center;margin-top: 5px;}
+.Cart2 div{float: left;width: 20%;height: 125px;text-align: center;}
+.Cart6{float: left;width: 55%;height: 95px;margin-left: 83px;margin-top: 10px;border-radius: 15px;}
+.Cart2 p{margin-top: 50px;}
+.Cart3{float: left;width: 100%;height: 45px;margin-top: 5px;text-align: center;}
+.Cart3 div{float: right;width: 15%;height: 40px;border-top: 1px solid black;border-bottom: 1px solid black;text-align: center;}
+.Cart4{float: left;width: 100%;height: 45px;margin-top: 5px;text-align: center;}
+.Cart4 div{float: right;width: 20%;height: 40px;text-align: center;}
+.Cart4 div button{margin-top: 10px;}
+.Cart5{width: 60px;height: 55px;margin-top: 35px;}
+
+/*  Farmer Cart Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Checkout Page CSS Started Here */
+
+.check1{float: left;width: 100%;height: 1050px;}
+.check2{float: left;width: 80%;height: 975px;transform: translate(-50,-50);top: 30%;left: 10%;position: absolute;}
+.check21{float: left;width: 90%;height: 275px;}
+.check3{float: left;width: 30%;height: 250px;margin-left: 29px;margin-top: 10px;}
+.check4{float: left;width: 30%;height: 200px;margin-left: 20px;margin-top: 15px;}
+.check4 img{width: 100%;height: 100%;}
+.check5{float: left;width: 40%;height: 150px;margin-left: 30px;margin-top: 50px;text-align: justify;}
+.check6{float: left;width: 94.5%;height: 225px;border: 2px solid black;margin-left: 29px;margin-top: 10px;}
+.check7{float: left;width: 94.5%;height: 225px;border: 2px solid black;margin-left: 29px;margin-top: 10px;}
+.check61{float: left;width: 25%;height: 175px;border: 2px solid black;margin-top: 10px;margin-left: 20px;}
+.check6 u{float: left;width: 100%;margin-top: 5px;margin-left: 10px;}
+.check7 u{float: left;width: 100%;margin-top: 5px;margin-left: 10px;}
+.check61 p{margin-left: 50px;}
+.check7 input{margin-left: 20px;margin-top: 10px;}
+.check8{float: left;height: 50px;width: 94.5%;margin-left: 29px;margin-top: 10px;}
+.check8 button{width: 18%;height: 40px;margin-top: 5px;float: right;margin-right: 30px;border-radius: 15px;outline: none;font-weight: bold;font-size: large;}
+.check9{float: left;width: 94.5%;height: 100px;border: 2px solid black;margin-left: 29px;margin-top: 10px;}
+.check9 u{float: left;width: 100%;margin-top: 5px;margin-left: 10px;}
+.check9 p{margin-top: 40px;margin-left: 10px;}
+
+/*  Farmer Checkout Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Orders Page CSS Started Here */
+
+.Farmer_Order{float: left;width: 100%;height: 35px;margin-top: 5px;background-color: lightgray;}
+.Farmer_Order b{margin-left: 20px;font-size: larger;}
+.Farmer_Order1{float: left;width: 100%;height: 250px;background-color: lightgray;}
+.Farmer_Order2{float: left;width: 10%;height: 200px;margin-left: 30px;}
+.Farmer_Order2 img{float: left;width: 100%;height: 200px;margin-top: 20px;}
+.Farmer_Order3{float: left;width: 25%;height: 100px;margin-left: 30px;}
+
+/*  Farmer Orders Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Notifications Page CSS Started Here */
+
+.Farmer_Not1{float: left;width: 100%;height: 100px;}
+.Farmer_Not1 img{ float: left; width: 100px; height: 75px; margin-top: 10px; margin-left: 20px; border-radius:5px ; -webkit-border-radius:5px ; -moz-border-radius:5px ; -ms-border-radius:5px ; -o-border-radius:5px ; }
+.Farmer_Not1 b{margin-left: 20px;font-size: larger;}
+
+/*  Farmer Notifications Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Track Page CSS Started Here */
+
+.Farmer_Track1{float: left;width: 100%;height: 500px;margin-top: 5px;text-align: center;background-color: rgba(95, 158, 160, 0.349);}
+.Farmer_Track2{float: left;width: 35%;height: 275px;background-color: whitesmoke; transform: translate(-50,-50);left: 32%;top: 40%; position: absolute;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Farmer_Track3{float: left;width: 100%;height: 50px;margin-top: 10px;}
+.Farmer_Track3 label{font-weight: bolder;font-size: larger;}
+.Farmer_Track3 input{height: 35px;width: 45%;border-radius: 5px;outline: none;cursor: pointer;font-size: large;}
+.Farmer_Track2 button{width: 30%;height: 40px;margin-top: 30px;font-size: larger; border-radius: 15px;outline: none;border: black 2px solid;cursor: pointer;}
+
+/*  Farmer Track Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Profile Page CSS Started Here */
+
+.Farmer_Info1{float: left;width: 100%;height: 500px;background-color:  rgba(95, 158, 160, 0.205);}
+.Farmer_Info2{float: left;width: 45%;height: 325px;margin-top: 40px;text-align: center; margin-left: 48px;background-color: whitesmoke;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Farmer_Info2 p{margin-top: 15px;}
+.Farmer_Info2 b{text-align: center;margin-top: 10px;}
+.Farmer_Info2 u{font-weight: bold;font-family: sans-serif;font-size: x-large;color: rgb(43, 10, 78);}
+.Farmer_Info2 div{float: left;width: 100%;margin-top: 15px;text-align: justify;}
+.Farmer_Info2 div label{float: left;width: 30%;font-size: large;margin-left: 20px;}
+.Farmer_Info2 a{font-size: large;margin-left: 20px;}
+.Farmer_Info3{float: left;width: 45%;height: 325px;margin-top: 40px;margin-left: 48px;text-align: center;background-color: whitesmoke;border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.479) 3px 5px 5px 5px;}
+.Farmer_Info3 p{margin-top: 15px;}
+.Farmer_Info3 u{font-weight: bold;font-family: sans-serif;font-size: x-large;color: rgb(43, 10, 78);}
+.Farmer_Info3 div{float: left;width: 100%;margin-top: 15px;text-align: justify;}
+.Farmer_Info3 a{font-size: large;margin-left: 20px;}
+.Farmer_Info3 div label{float: left;width: 35%;font-size: large;margin-left: 20px;}
+
+/*  Farmer Profile Page CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Address Page CSS Ended Here */
+
+.fadd{float: left;width: 100%;height: 40px;text-align: center;font-size: larger;}
+
+/*  Farmer Address Page CSS Started Here */
+/*  Farmer CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Admin CSS Started Here */
+/*  Admin Login CSS Started Here */
+
+
+
+/*  Admin Login CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Farmer Data CSS Started Here */
+
+
+.FF1{height: 80%;width: 100%;background-color: rgba(0, 206, 209, 0.644);}
+.FF1 table{height: 45%;width: 55%;border: 1px solid black;position: absolute;top: 15%;left: 20%;}
+.FF1 table th{border:1px solid black;}
+.FF1 table td{border:1px solid black;text-align: center;}
+.FF2 {font-size: 25;}
+
+/*  Farmer Data CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Dealer Data CSS Started Here */
+
+
+
+
+/*  Dealer Data CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/
+/*  Govt Data CSS Started Here */
+
+
+.GG1{height: 80%;width: 100%;background-color: rgba(0, 206, 209, 0.644);}
+.GG1 table{height: 45%;width: 55%;border: 1px solid black;position: absolute;top: 15%;left: 20%;}
+.GG1 table th{border:1px solid black;}
+.GG1 table td{border:1px solid black;text-align: center;}
+.GG2 {font-size: 25;text-decoration: underline;}
+
+/*  Govt Data CSS Ended Here */
+/*  Admin CSS Ended Here */
+/*-----------------------------------------------------------------------------------------------*/

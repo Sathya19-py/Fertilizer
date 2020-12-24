@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Update Farmer</title>
+        <style>
+            .Admin_Update_Farmer{float: left;width: 100%;height: 600px; margin-top: 5px;border-radius: 10px;background-image: url(color.jpg);background-size: cover;background-color: gray;}
+            .Admin_Update_Farmer1{position: absolute;top: 40%;left: 50%;background-color: whitesmoke; transform: translate(-50%,-50%);width: 75%;height: 500px;float: left;border-radius: 10px;}
+            .Admin_Update_Farmer2{float: left;width: 100%;height: 60px;font-size: xx-large;border-radius: 10px;border-bottom: orangered 5px solid;}
+            .Admin_Update_Farmer2 b{float: left; margin-top:10px;width: 100%;height: 40px;color: orangered; text-align: center;}
+            .Admin_Update_Farmer3{float: left;width: 100%;height: 50px;margin-top: 20px;}
+            .Admin_Update_Farmer3 div{float: left;width: 45%;height: 50px;margin-left: 50px;}
+            .Admin_Update_Farmer3 div label{float: left;width: 30%;height: 50px;font-size: larger;}
+            .Admin_Update_Farmer3 div input{width: 50%;height: 35px;outline: none;border-radius: 5px;}
+            .Admin_Update_Farmer4{float: left;width: 100%;height: 50px;text-align: center;margin-top: 10px;}
+            .Admin_Update_Farmer4 button{text-align: center;width: 12%;height: 40px;border-radius: 20px;background-color: antiquewhite;font-weight: bold;outline: none;font-size: larger;}
+            .Admin_Update_Farmer5{border-bottom-left-radius: 15px;border-top-left-radius: 15px;margin-left: 50px;margin-top: 30px;width: 100px;height: 30px;font-weight: bold;outline: none;font-size: larger;color: orangered;}
+        </style>
+    </head>
+    <body>
+        <div class="Admin_Update_Farmer">
+            <a href="gdata">
+                <button class="Admin_Update_Farmer5" >back</button>
+            </a>    
+            <form action="govtupdatefarmer" method="POST">
+                {% csrf_token %}
+                <div class="Admin_Update_Farmer1">
+                    <div class="Admin_Update_Farmer2">
+                       <b>Update Farmer Details</b> 
+                    </div>
+                    {% for i in r %}
+                        <div class="Admin_Update_Farmer3" >
+                            <div>
+                                <label><sup>*</sup>First Name  :  </label>
+                                <input type="text" name="ufname" value="{{i.First_Name}}" placeholder="Enter First Name" required>
+                            </div>
+                            <div>
+                                <label><sup>*</sup>Last Name  :  </label>
+                                <input type="text" name="ulname" value="{{i.Last_Name}}" placeholder="Enter Last Name" required>
+                            </div>
+                        </div>
+                        <div class="Admin_Update_Farmer3" >
+                            <div>
+                                <label><sup>*</sup>House No  :  </label>
+                                <input type="text" name="uhouseno" value="{{i.House_Number}}" placeholder="Enter House No">
+                            </div>
+                            <div>
+                                <label><sup>*</sup>Village  :  </label>
+                                <input type="text" name="uvillage" value="{{i.Village_Name}}" placeholder="Enter Village">
+                            </div>
+                        </div>
+                        <div class="Admin_Update_Farmer3" >
+                            <div>
+                                <label><sup>*</sup>Mandal  :  </label>
+                                <input type="text" name="umandal" value="{{i.Mandal_Name}}" placeholder="Enter Mandal">
+                            </div>
+                            <div>
+                                <label><sup>*</sup>District  :  </label>
+                                <input type="text" name="udistrict" value="{{i.District_Name}}" placeholder="Enter District">
+                            </div>
+                        </div>
+                        <div class="Admin_Update_Farmer3" >
+                            <div>
+                                <label><sup>*</sup>State  :  </label>
+                                <input type="text" name="ustate" value="{{i.State_Name}}" placeholder="Enter State">
+                            </div>
+                            <div>
+                                <label><sup>*</sup>Aadhaar Number  :  </label>
+                                <input type="number" name="uaadhaar" value="{{i.Aadhaar_Number}}" placeholder="Enter Aadhaar Number" required>
+                            </div>
+                        </div>
+                        <div class="Admin_Update_Farmer3" >
+                            <div>
+                                <label><sup>*</sup>P-B Number :  </label> 
+                                <input type="text" name="upassbook" value="{{i.PassBook_Number}}" placeholder="Enter PB Number" required >
+                            </div>
+                            <div>
+                                <label><sup>*</sup>Land  :  </label>
+                                <input type="text"  name="uland" value="{{i.Land}}" placeholder="Land In Acers" required>
+                            </div>
+                        </div>
+                        <div class="Admin_Update_Farmer4">
+                            <input type="hidden" name="Uid" value="{{i.id}}">
+                            <button type="submit">Update</button>
+                        </div>
+                    {% endfor %}      
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

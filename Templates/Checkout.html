@@ -1,0 +1,60 @@
+{% extends 'Farmer_Base.html' %}
+{% block Farmer %}
+<title>Checkout</title>
+{% load static %}
+<div class="check1">   
+    <form action="forders" method="POST">
+        {% csrf_token %}
+        <div class="check2">
+            <div class="check21">
+                {% for i in car %}
+                    <div class="check3">
+                        <div class="check4">
+                            <img src="{{i.Image.url}}">
+                        </div>
+                        <div class="check5">
+                            <p><b>Name : </b>{{i.Name}}</p>
+                            <input type="hidden" value="{{i.Name}}" name="Name">
+                            <p><b>Price : </b>{{i.Sub_Total}}</p>
+                            <p><b>Quantity : </b>{{i.Quantity}}</p>
+                        </div>   
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="check6">
+                <u><b>Select Delivery Address</b></u>
+                <div class="check61">
+                    <input type="radio" value="Address" checked name="Address">
+                    <p>Ramanthapur,</p>
+                    <p>Hyderabad</p>
+                    <p>Telangana</p>
+                    <p>PIN : 500013</p>
+                </div>
+                <div class="check61">
+                    <input type="radio" value="Address" name="Address">
+                    <p>Ramanthapur,</p>
+                    <p>Hyderabad</p>
+                    <p>Telangana</p>
+                    <p>PIN : 500013</p>
+                </div>
+            </div>
+            <div class="check9">
+                <u><b>Total Amount</b></u>
+                <p><b>Total Amont : </b>&#8377 {{t}}</p>
+                
+            </div>
+            <div class="check7">
+                <u><b>Select Payment Mode</b></u>
+                <p><input type="radio" value="Cash On Delivery" checked name="Payment">Cash On Delivery</p>
+                <p><input type="radio" value="Net Banking" name="Payment">Net Banking</p>
+                <p><input type="radio" value="Credit Card" name="Payment">Credit Card</p>
+                <p><input type="radio" value="Debit Card" name="Payment">Debit Card</p>
+                
+            </div>
+            <div class="check8">
+                <button type="submit">Place Order</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

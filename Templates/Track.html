@@ -1,0 +1,62 @@
+{% load static %}
+<html>
+    <head>
+        <title>Track Your Order</title>
+        <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+    </head>
+    <body>
+        <div class="h1">
+            <a class="up" href="">Cart</a>
+            <a class="up" href="">Track Your Order</a>
+            <div class="up1"></div>
+        </div>
+        <div class="d1">
+            <div class="b1" >
+                <div class="logo">
+                    <img src="{% static 'Images/Logo/my.png' %}">
+                </div>
+                <div class="d2" >
+                    <input type="text" placeholder="Search Product,Details">
+                    <button type="submit" >Search</button>
+                </div>
+                <div class="d3" >
+                    <p><b>Contact No:</b> +91-9550027195 , 9666412540</p> 
+                    <p><b>Email Id :</b> info@e-fertilizers.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="h1">
+            <a class="h2" href="/">Home</a> 
+            <a class="h2" href="product">Products</a>
+            <a class="h2" href="#">Media</a>
+            <div class="h3">
+                <a class="h4">Farmer's Corner</a>
+                <div class="h5">
+                    <a class="h6" href="registration">New User</a>
+                    <a class="h6" href="customer_login">Sign In</a>
+                </div>
+            </div>
+            <div class="h3">
+                <a class="h4">Dealer's Corner</a>
+                <div class="h5">
+                    <a class="h6" href="../Dealer/sell_with">Sell With Us</a>
+                    <a class="h6" href="../Dealer/">Sign In</a>
+                </div>
+            </div>
+            <a class="h2" href="#">About Us</a>
+            <a class="h2" href="contact">Contact Us</a>
+        </div>
+        <form>
+            <div class="Track1" >
+                <div class="Track2">
+                    <u><b><h1>Track Your Order</h1></b></u>
+                    <div class="Track3">
+                        <label>Order ID : </label>
+                        <input type="number" required name="Order_Id">
+                    </div>
+                    <button type="submit"><b>Get Details</b></button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

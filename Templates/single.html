@@ -1,0 +1,29 @@
+{% extends 'Farmer_Base.html' %}
+{% block Farmer %}
+<title>Product Details</title>
+{% load static %}
+<div class="single1" >
+    {% for mes in messages %}
+      <h3>{{mes}}</h3>
+    {% endfor %}
+    <div class="single2">
+        {% for i in Data %}
+            <div class="single3">
+                <h3><img src="{{i.Image.url}}"></h3>
+            </div>
+            <div class="single4">
+                <p><b> Name : </b> {{i.Name}}</p>
+                <p><b> Price : </b> {{i.Price}} / {{i.Weight}}{{i.Weight1}}</p>
+                <p>{{i.Description}}</p>
+                <div class="single5">
+                    <p><b>Quantity : </b><input style="width: 45px;text-align:center"  type="number" name="Quantity" value=1></p>
+                </div>
+                <div class="single5">
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

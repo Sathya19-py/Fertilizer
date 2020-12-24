@@ -1,0 +1,79 @@
+{% extends 'Home_Base.html' %}
+{% block Home %}
+<title>Sell With Us</title>
+{% load static %}
+<style>
+    .sel1{background-image: url(color.jpg); width: 100%;height: 750px;float: left;background-size: cover;margin-top: 5px;border-radius: 5px;}
+    .sel2{position: absolute;top: 80%;left: 50%; transform: translate(-50%,-50%);width: 40%;height: 675px;float: left;border-radius: 10px;background-color: rgba(18, 37, 143, 0.315);}
+    .sel3{float: left;width: 100%;height: 40px;color: black;border-bottom: #01ff0a 5px solid;}
+    .sel4{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;margin-top: 5px;font-size: x-large;}
+    .sel6{float: left;width: 50%;height: 450px;}
+    .sel7{float: left;width: 50%;height: 450px;}
+    .sel8{float: left;width: 100%;height: 50px;font-size: large;margin-top: 25px;}
+    .sel9{width: 50%;height: 30px;margin-left: 40px;}
+    .sel10{width: 85%;height: 35px;border-radius: 5px;margin-left: 40px;outline: none;}
+    .sel8 sup{color: red;font-size: larger;}
+    .sel8 textarea{width: 85%;height: 75px;border-radius: 5px;margin-left: 40px;outline: none;}
+    .sel8 a{color: whitesmoke;}
+    .sel12{margin-left: 40px;margin-top: 50px;text-decoration: none;}
+    .sel13{width: 30%;height: 30px;background-color: aqua;font-weight: 700;margin-left: 100px;border-radius: 5px;padding: 5px;margin-top: 5px;}
+    .sel14{float: left;width: 100%;height: 150px;text-align: center;}
+    .sel15{float: left;width: 40%;height: 60px;text-align: center;margin-left: 80px;}
+    .sel16{float: left;margin-left: 20px;font-size: large;}
+    .sel17{text-decoration: none;color: whitesmoke;}
+</style>
+<div class="sel1" style="background-image: url({% static 'Images/Pics/color.jpg' %})">
+    {% for mess in messages %}
+        <h3>{{mess}}</h3>
+    {% endfor %}
+    <div class="sel2">
+        <div class="sel3">
+            <p class="sel4" ><b>Sell With Us</b></p>
+        </div>
+        <form action="sell_with" method="POST">
+            {% csrf_token %}
+            <div class="sel6">
+                <div class="sel8">
+                    <label class="sel9">Contact Person Name :<sup>*</sup></label><br>
+                    <input class="sel10" type="text" name="Name" placeholder="Enter Full Name" required>
+                </div>
+                <div class="sel8">
+                    <label class="sel9">Email Id :<sup>*</sup></label><br>
+                    <input class="sel10" type="email" name="Email" placeholder="Enter Email Id" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters must in lower case">
+                </div>
+                <div class="sel8">
+                    <label class="sel9">Contact Number :<sup>*</sup></label><br>
+                    <input class="sel10" type="tel" name="Mobile" placeholder="Contact Number" required pattern="^\d{10}$" maxlength="10">
+                </div>
+                <div class="sel8">
+                    <label class="sel9">Shop Name:<sup>*</sup></label><br>
+                    <input class="sel10" type="text" name="ShopName" placeholder="Shop Name" required >
+                </div>
+                <div class="sel8">
+                    <label class="sel9">Shop Id:<sup>*</sup></label><br>
+                    <input class="sel10" type="text" name="ShopId" placeholder="Shop Id" required >
+                </div>
+                <div class="sel8">
+                    <label class="sel9">Shop Address:<sup>*</sup></label><br>
+                    <textarea rows="4" cols="25" required name="Address" placeholder="Enter Your Address"></textarea>
+                </div>
+                <div class="sel8">
+                    <input class="sel12" type="checkbox" required >I Accept <a href="#">Terms and Conditions</a>
+                </div>
+                <div class="sel8">
+                    <button class="sel13" type="submit">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+        <div class="sel7">
+            <div class="sel14"></div>
+            <div class="sel14"></div>
+            <div class="sel14">
+                <input class="sel15" type="image" src="{% static 'Images/Icon/people.png' %}">
+                <p class="sel16" >Already A User <a class="sel17" href="../Dealer/"> Click Here</a> To Login</p> 
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

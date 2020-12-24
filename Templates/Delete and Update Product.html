@@ -1,0 +1,47 @@
+{% extends 'Dealer_Base.html' %}
+{% block Dealer %}
+<title>Delete and Update Product</title>
+{% load static %}
+<div class="Delete_Product1">
+    <div class="Delete_Product2">
+        <table>
+            <tr>
+                <th colspan="8">
+                    <u>Update/Delete Product</u>
+                </th>
+            </tr>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Product Price</th>
+                <th>Product Quantity</th>
+                <th>Product Weight</th>
+                <th>Update Product</th>
+                <th>Delete Product</th>
+            </tr>
+            
+                {% for p in pro %}
+                <tr>
+                    <td>{{p.id}}</td>
+                    <td>{{p.Name}}</td>
+                    <td><img class="Delete_Product3" src="{{p.Image.url}}"></td>
+                    <td>&#8377 {{p.Price}}</td>
+                    <td>{{p.Quantity}}</td>
+                    <td>{{p.Weight}}/{{p.Weight1}}</td>
+                    <form action="update" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{p.id}}">
+                        <td><button type="submit">Update</button></td>
+                    </form>
+                    <td>
+                        <a href="delete?id={{p.id}}">
+                            <img class="Delete_Product4" src="{% static 'Images/Icon/garbage.png' %}">
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'Home_Base.html' %}
+{% block Home %}
+<title>Seller Login</title>
+{% load static %}
+<form>
+    <div class="SellerLog1" style="background-image: url({% static 'Images/Pics/rom.jpg' %})">
+        <div class="SellerLog2">
+            <b>Seller Login</b>
+            <div class="SellerLog3">
+                <img class="SellerLog4" src="{% static 'Images/Icon/people.png' %}">
+                <input type="text" name="SelName" placeholder="UserName" required maxlength="15"></input>
+            </div>
+            <div class="SellerLog3">
+                <img class="SellerLog5" src="{% static 'Images/Icon/lock.png' %}">
+                <input type="password" name="SelPass" placeholder="Password" required maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must Contain At least one number and one uppercase and lowercase letter,and at least 8 or more characters" >
+            </div>
+            <div class="SellerLog8">
+                <p class="SellerLog9"><input type="checkbox"> Remember Me</p>
+            </div>
+            <div class="SellerLog6">
+                <button type="submit">Login</button>
+                <a style="color: red;" href="dhome" >Login</a>
+            </div>
+            <div class="SellerLog7">
+                <a href="#">Forget Password?/Username</a>
+            </div>
+            <div class="SellerLog7">
+                <p></p><a href="sell_with">Click Here To Register</a></p>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
