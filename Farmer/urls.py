@@ -15,6 +15,7 @@ urlpatterns = [
     path("single",views.Single,name="single"),
     path("check",views.CheckOut,name="check"),
     path('fcart',views.Farmer_Cart,name='fcart'),
+    path('adquanty',views.Add_Delete,name='adquanty'),
     path('forders',views.Farmer_Orders,name='forders'),
     path('details',views.Order_Details,name='details'),
     path('fnotifications',views.Farmer_Notifications,name='fnotifications'),

@@ -5,6 +5,24 @@ from django.contrib import messages
 import string
 import random
 
+from rest_framework import generics
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet
+from Dealer.serializers import ProductSerializer,Product
+
+class ProductOperations(ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+class ReadProducts(ReadOnlyModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+
+
+
 # Create your views here.
 def SellWithUs(request):
     if request.method == 'POST':

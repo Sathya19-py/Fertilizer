@@ -192,6 +192,73 @@ def Farmer_Cart(request):
     New = Cart.objects.all()
     return render(request,"Farmer/Farmer Cart.html",{"car":New,'t':Total,"c":count})
 
+def Add_Delete(request):
+    Customer_Email = request.session['user']
+    cid = request.POST.get('id')
+    Pid = request.POST.get('pid')
+    option = request.POST.get('op')
+    q = int(request.POST.get('qua'))
+    Price = request.POST.get('price')
+    if option == '+':
+        r = Product.objects.filter(id=Pid)
+        for x in r:
+            q2 = x.Quantity
+            res = Cart.objects.filter(id=cid)
+            for i in res:
+                q1 = int(i.Quantity)
+                p = int(i.Sub_Total)
+                if q2 >= q:
+                    if q2 >= 1:
+                        q1 = int(i.Quantity)
+                        p = int(i.Sub_Total)
+                        Quantity = q1 + q
+                        Sub_Total = p + int(Price)
+                        print(Quantity)
+                        print(Sub_Total)
+
+                        q3 = q2 - q
+
+                        Product.objects.filter(id=Pid).update(Quantity=q3)
+
+                        Cart.objects.filter(id=cid).update(Quantity=Quantity,Sub_Total=Sub_Total)
+                        return redirect('cart')
+                    else:
+
+                        print(q1)
+                        print(q2)
+                        messages.info(request,'your already selected maximum Quantity')
+                        return redirect('cart')
+
+                else:
+                    messages.info(request,'please select less Quantity')
+                    return redirect('cart')
+
+
+    else:
+        r = Product.objects.filter(id=Pid)
+        for x in r:
+            q2 = x.Quantity
+            res = Cart.objects.filter(id=cid)
+            for i in res:
+                q1 = int(i.Quantity)
+                p = int(i.Sub_Total)
+                if q2 >= q:
+                    Quantity = q1 - q
+                    Sub_Total = p - int(Price)
+                    print(Quantity)
+                    print(Sub_Total)
+
+                    q3 = q2 + q
+                    Product.objects.filter(id=Pid).update(Quantity=q3)
+
+                    Cart.objects.filter(id=cid).update(Quantity=Quantity,Sub_Total=Sub_Total)
+                    return redirect('cart')
+
+                else:
+                    messages.info(request,'your already selected maximum Quantity')
+                    return redirect('cart')
+
+
 def DeleteCart(request):
     Cid = request.GET.get("Id")
     Cart.objects.filter(Index_Id=Cid).delete()
